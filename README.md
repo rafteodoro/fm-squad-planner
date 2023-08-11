@@ -1,24 +1,8 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+FM Squad Planner, as the name states, is an application that gets your FM squad
+via CSV and analyzes it to show you the best players for each position.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+<!-- TODO -->
+<!-- Create a how-to to collect the games data file -->
+<!-- Show step by step how to use the tool  -->
