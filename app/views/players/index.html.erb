@@ -35,12 +35,30 @@
   </nav>
 </div>
 <div class="container">
-<h1>Articles</h1>
-  <ul>
-    <% @articles.each do |article| %>
-      <li>
-        <%= article.title %>
-      </li>
-    <% end %>
-  </ul>
+  <h1>Players</h1>
+  <%# Renders the import button for the CSV File %>
+  <%= render "import" %>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">UID</th>
+        <th scope="col">Name</th>
+        <th scope="col">Age</th>
+        <th scope="col">Position</th>
+        <th scope="col">Personality</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @players.each do |player| %>
+        <tr>
+          <td><%= player.uid %></td>
+          <td><%= player.name %></td>
+          <td><%= player.age %></td>
+          <td><%= player.position %></td>
+          <td><%= player.personality %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 </div>

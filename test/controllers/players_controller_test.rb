@@ -2,7 +2,7 @@
 
 require 'test_helper'
 
-class ArticleTest < ActiveSupport::TestCase
+class PlayersControllerTest < ActionDispatch::IntegrationTest
   # test "the truth" do
   #   assert true
   # end
