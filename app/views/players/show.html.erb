@@ -1,3 +1,184 @@
 <div class="container">
-  <h1><%= @player.name %></h1>
+  <div class="row">
+    <h1><%= @player.name %></h1>
+    <h5><%= @player.position %></h5>
+    <h5><%= @player.age %> years old</h5>
+  </div>
+  <div class="row">
+  <h5>ATTRIBUTES</h5>
+    <div class="col">
+      <h5>TECHNICAL</h5>
+      <table class="table table-striped">
+        <tbody>
+          <tr>
+            <td>Corners</td>
+            <td><%= @player.corners %></td>
+          </tr>
+          <tr>
+            <td>Crossing</td>
+            <td><%= @player.crossing %></td>
+          </tr>
+          <tr>
+            <td>Dribbling</td>
+            <td><%= @player.dribbling %></td>
+          </tr>
+          <tr>
+            <td>Finishing</td>
+            <td><%= @player.finishing %></td>
+          </tr>
+          <tr>
+            <td>First Touch</td>
+            <td><%= @player.first_touch %></td>
+          </tr>
+          <tr>
+            <td>Free Kick Taking</td>
+            <td><%= @player.free_kicks %></td>
+          </tr>
+          <tr>
+            <td>Heading</td>
+            <td><%= @player.heading %></td>
+          </tr>
+          <tr>
+            <td>Long Shots</td>
+            <td><%= @player.long_shots %></td>
+          </tr>
+          <tr>
+            <td>Long Throws</td>
+            <td><%= @player.long_throw %></td>
+          </tr>
+          <tr>
+            <td>Marking</td>
+            <td><%= @player.marking %></td>
+          </tr>
+          <tr>
+            <td>Passing</td>
+            <td><%= @player.passing %></td>
+          </tr>
+          <tr>
+            <td>Penalty Taking</td>
+            <td><%= @player.penalty_taking %></td>
+          </tr>
+          <tr>
+            <td>Tackling</td>
+            <td><%= @player.tackling %></td>
+          </tr>
+          <tr>
+            <td>Technique</td>
+            <td><%= @player.technique %></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col">
+      <h5>MENTAL</h5>
+      <table class="table table-striped">
+        <tbody>
+          <tr>
+            <td>Aggression</td>
+            <td><%= @player.aggression %></td>
+          </tr>
+          <tr>
+            <td>Anticipation</td>
+            <td><%= @player.anticipation %></td>
+          </tr>
+          <tr>
+            <td>Bravery</td>
+            <td><%= @player.bravery %></td>
+          </tr>
+          <tr>
+            <td>Composure</td>
+            <td><%= @player.composure %></td>
+          </tr>
+          <tr>
+            <td>Concentration</td>
+            <td><%= @player.concentration %></td>
+          </tr>
+          <tr>
+            <td>Decisions</td>
+            <td><%= @player.decisions %></td>
+          </tr>
+          <tr>
+            <td>Determination</td>
+            <td><%= @player.determination %></td>
+          </tr>
+          <tr>
+            <td>Flair</td>
+            <td><%= @player.flair %></td>
+          </tr>
+          <tr>
+            <td>Leadership</td>
+            <td><%= @player.leadership %></td>
+          </tr>
+          <tr>
+            <td>Off The Ball</td>
+            <td><%= @player.off_the_ball %></td>
+          </tr>
+          <tr>
+            <td>Positioning</td>
+            <td><%= @player.positioning %></td>
+          </tr>
+          <tr>
+            <td>Teamwork</td>
+            <td><%= @player.teamwork %></td>
+          </tr>
+          <tr>
+            <td>Vision</td>
+            <td><%= @player.vision %></td>
+          </tr>
+          <tr>
+            <td>Work Rate</td>
+            <td><%= @player.work_rate %></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col">
+      <h5>PHYSICAL</h5>
+      <table class="table table-striped">
+        <tbody>
+          <tr>
+            <td>Acceleration</td>
+            <td><%= @player.acceleration %></td>
+          </tr>
+          <tr>
+            <td>Agility</td>
+            <td><%= @player.agility %></td>
+          </tr>
+          <tr>
+            <td>Balance</td>
+            <td><%= @player.balance %></td>
+          </tr>
+          <tr>
+            <td>Jumping Reach</td>
+            <td><%= @player.jumping %></td>
+          </tr>
+          <tr>
+            <td>Natural Fitness</td>
+            <td><%= @player.natural_fitness %></td>
+          </tr>
+          <tr>
+            <td>Pace</td>
+            <td><%= @player.pace %></td>
+          </tr>
+          <tr>
+            <td>Stamina</td>
+            <td><%= @player.stamina %></td>
+          </tr>
+          <tr>
+            <td>Strength</td>
+            <td><%= @player.strength %></td>
+          </tr>
+          <tr>
+            <td>Right Foot</td>
+            <td><%= @player.foot_right %></td>
+          </tr>
+          <tr>
+            <td>Left Foot</td>
+            <td><%= @player.foot_left %></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
 </div>
