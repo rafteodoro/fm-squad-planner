@@ -18,9 +18,7 @@ class CsvImportService
       player_hash[:personality] = row['Personality']
       player_hash = addTechnicalFields(player_hash, row)
 
-      if player_hash[:name].nil? == false
-        Player.find_or_create_by!(player_hash)
-      end
+      Player.find_or_create_by!(player_hash) if player_hash[:name].nil? == false
       # for performance, you could create a separate job to import each user
       # CsvImportJob.perform_later(user_hash)
     end
