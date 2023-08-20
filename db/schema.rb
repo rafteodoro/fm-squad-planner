@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_08_12_182351) do
+ActiveRecord::Schema[7.0].define(version: 2023_08_13_160006) do
   create_table "articles", force: :cascade do |t|
     t.string "title"
     t.text "body"
@@ -19,13 +19,29 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_12_182351) do
   end
 
   create_table "players", force: :cascade do |t|
-    t.integer "uid"
+    t.integer "uid", null: false
     t.text "name"
     t.integer "age"
     t.text "position"
     t.text "personality"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.text "foot_right"
+    t.text "foot_left"
+    t.integer "corners"
+    t.integer "crossing"
+    t.integer "dribbling"
+    t.integer "finishing"
+    t.integer "first_touch"
+    t.integer "free_kicks"
+    t.integer "heading"
+    t.integer "long_shots"
+    t.integer "long_throw"
+    t.integer "marking"
+    t.integer "passing"
+    t.integer "penalty_taking"
+    t.integer "tackling"
+    t.integer "technique"
   end
 
 end
