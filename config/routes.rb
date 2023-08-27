@@ -2,9 +2,7 @@
 
 Rails.application.routes.draw do
   root 'players#index'
-  get '/articles', to: 'articles#index'
-  get '/players', to: 'players#index'
-  get '/players/:id', to: 'players#show'
+  # get '/articles', to: 'articles#index'
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
@@ -14,6 +12,10 @@ Rails.application.routes.draw do
       post :import
     end
   end
-  # Defines the root path route ("/")
-  # root "articles#index"
+
+  resources :tactics, only: %i[index show new create] do
+    resources :positions, only: %i[new create]
+  end
+
+  resources :positions, only: %i[show edit update destroy]
 end
