@@ -1,0 +1,6 @@
+<div class="container">
+  <h1>Created Tactics</h1>
+  <% @tactics.each do |tactic| %>
+    <%= link_to tactic.name, tactic_path(tactic) %>
+  <% end %>
+</div>
