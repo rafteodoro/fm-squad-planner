@@ -1,0 +1,8 @@
+<div class="container">
+  <h1>New tactic</h1>
+  <%= simple_form_for(@tactic) do |form| %>
+    <%= form.input :name %>
+    <%= link_to 'Back', tactics_path, class:'btn btn-ghost' %>
+    <%= form.button :submit, class:'btn btn-flat' %>
+  <% end %>
+</div>
