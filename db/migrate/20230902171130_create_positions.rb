@@ -56,7 +56,7 @@ class CreatePositions < ActiveRecord::Migration[7.0]
       t.float :imp_w
       t.float :inj_w
       t.float :position_w
-      t.references :tactics, null: false, foreign_key: true
+      t.references :tactic, null: false, foreign_key: true
 
       t.timestamps
     end

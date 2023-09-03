@@ -1,7 +1,11 @@
 <div class="container">
   <h1>Created Tactics</h1>
-  <%= link_to 'Add new tactic', new_tactic_path, class:'btn btn-primary' %>
-  <% @tactics.each do |tactic| %>
-    <%= link_to tactic.name, tactic_path(tactic) %>
-  <% end %>
+  <%= link_to 'Add new tactic', new_tactic_path, class:'btn btn-sm btn-primary' %>
+  <div class="row mt-3">
+  <ul>
+    <% @tactics.each do |tactic| %>
+      <li><%= link_to tactic.name, tactic_path(tactic) %></li>
+    <% end %>
+  </ul>
+  </div>
 </div>

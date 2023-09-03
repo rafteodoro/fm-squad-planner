@@ -17,5 +17,5 @@ Rails.application.routes.draw do
     resources :positions, only: %i[new create]
   end
 
-  resources :positions, only: %i[show edit update destroy]
+  resources :positions, only: %i[index show edit update destroy]
 end

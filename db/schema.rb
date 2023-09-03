@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_08_28_014521) do
+ActiveRecord::Schema[7.0].define(version: 2023_09_03_155340) do
   create_table "articles", force: :cascade do |t|
     t.string "title"
     t.text "body"
@@ -67,9 +67,9 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_28_014521) do
   end
 
   create_table "positions", force: :cascade do |t|
-    t.text "name"
-    t.text "role"
-    t.text "mentality"
+    t.string "name"
+    t.string "role"
+    t.string "mentality"
     t.float "acc_w"
     t.float "agi_w"
     t.float "bal_w"
@@ -122,10 +122,10 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_28_014521) do
     t.float "imp_w"
     t.float "inj_w"
     t.float "position_w"
-    t.integer "tactics_id", null: false
+    t.integer "tactic_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["tactics_id"], name: "index_positions_on_tactics_id"
+    t.index ["tactic_id"], name: "index_positions_on_tactic_id"
   end
 
   create_table "tactics", force: :cascade do |t|
@@ -134,5 +134,5 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_28_014521) do
     t.datetime "updated_at", null: false
   end
 
-  add_foreign_key "positions", "tactics", column: "tactics_id"
+  add_foreign_key "positions", "tactics"
 end

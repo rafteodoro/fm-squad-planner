@@ -1,0 +1,54 @@
+<div class="container">
+  <h1>Add position</h1>
+  <%= link_to 'Back', tactic_path(@tactic), class:"btn btn-sm btn-secondary" %>
+  <hr>
+  <%= simple_form_for(@position) do |form| %>
+    <p><strong>General Info</strong></p>
+    <div class="row">
+      <div class="col-4">
+        <%= form.input :name, :collection => %w[GK DC DR DL DM WBR WBL MC MR ML AMC AMR AML ST] %>
+      </div>
+      <div class="col-4">
+        <%= form.input :role %>
+      </div>
+      <div class="col-4">
+        <%= form.input :mentality %>
+      </div>
+    </div>
+    <hr>
+    <div class="row">
+      <div class="col-3">
+        <p><strong>Technical</strong></p>
+        <%= form.label :cor_w, "Corners" %>
+        <%= form.input :cor_w, label: false %>
+        <%= form.label :cro_w, "Crossing" %>
+        <%= form.input :cro_w, label: false %>
+        <%= form.label :dri_w, "Dribbling" %>
+        <%= form.input :dri_w, label: false %>
+        <%= form.label :fin_w, "Finishing" %>
+        <%= form.input :fin_w, label: false %>
+        <%= form.label :fir_w, "First Touch" %>
+        <%= form.input :fir_w, label: false %>
+        <%= form.label :fre_w, "Free Kick Taking" %>
+        <%= form.input :fre_w, label: false %>
+        <%= form.label :hea_w, "Heading" %>
+        <%= form.input :hea_w, label: false %>
+        <%= form.label :lon_w, "Long Shots" %>
+        <%= form.input :lon_w, label: false %>
+        <%= form.label :lth_w, "Long Throws" %>
+        <%= form.input :lth_w, label: false %>
+        <%= form.label :mar_w, "Marking" %>
+        <%= form.input :mar_w, label: false %>
+        <%= form.label :pas_w, "Passing" %>
+        <%= form.input :pas_w, label: false %>
+        <%= form.label :pen_w, "Penalty Taking" %>
+        <%= form.input :pen_w, label: false %>
+        <%= form.label :tac_w, "Tackling" %>
+        <%= form.input :tac_w, label: false %>
+        <%= form.label :tec_w, "Technique" %>
+        <%= form.input :tec_w, label: false %>
+      </div>
+      
+    <%= form.button :submit, class:"btn btn-sm btn-primary" %>
+  <% end %>
+</div>

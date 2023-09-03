@@ -55,8 +55,8 @@ one:
   dir_w: 1.5
   imp_w: 1.5
   inj_w: 1.5
-  pos_w: 1.5
-  tactics: one
+  position_w: 1.5
+  tactic: one
 
 two:
   name: MyText
@@ -113,5 +113,5 @@ two:
   dir_w: 1.5
   imp_w: 1.5
   inj_w: 1.5
-  pos_w: 1.5
-  tactics: two
+  position_w: 1.5
+  tactic: two

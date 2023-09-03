@@ -1,8 +1,10 @@
-class Position < ApplicationRecord
-  belongs_to :tactics
+# frozen_string_literal: true
 
-  validates :tactics_id, presence: true
-  validates :name, presence: true
-  validates :role, presence: true
-  validates :mentality, presence: true
+# Position model
+class Position < ApplicationRecord
+  belongs_to :tactic
+
+  POSITIONS = %w[GK DC DR DL DM WBR WBL MC MR ML AMC AMR AML ST].freeze
+
+  validates :name, presence: true, inclusion: { in: POSITIONS }
 end

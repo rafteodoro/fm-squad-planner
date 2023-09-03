@@ -1,0 +1,10 @@
+<div class="container">
+  <h1><%= @tactic.name %></h1>
+  <%= link_to 'Back', tactics_path, class:"btn btn-sm btn-secondary" %>
+  <%= link_to 'Add position', new_tactic_position_path(@tactic), class:"btn btn-sm btn-primary" %>
+  <div class="row">
+  <% 11.times do %>
+    hello
+  <% end %>
+  </div>
+</div>
