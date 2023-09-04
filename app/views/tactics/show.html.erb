@@ -2,9 +2,27 @@
   <h1><%= @tactic.name %></h1>
   <%= link_to 'Back', tactics_path, class:"btn btn-sm btn-secondary" %>
   <%= link_to 'Add position', new_tactic_position_path(@tactic), class:"btn btn-sm btn-primary" %>
-  <div class="row">
-  <% 11.times do %>
-    hello
-  <% end %>
-  </div>
+
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Position</th>
+        <th scope="col">Mentality</th>
+        <th scope="col">Role</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @positions.each do |position|%>
+            <tr>
+              <td>
+                <%= link_to position_path(position) do %>
+                  <h5><%= position.name %></h5>
+                <% end %>
+              </td>
+              <td><%= position.mentality %></td>
+              <td><%= position.role %></td>
+            </tr>
+      <% end %>
+    </tbody>
+  </table>
 </div>

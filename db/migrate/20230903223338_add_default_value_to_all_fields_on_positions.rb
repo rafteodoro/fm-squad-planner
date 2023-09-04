@@ -1,0 +1,56 @@
+class AddDefaultValueToAllFieldsOnPositions < ActiveRecord::Migration[7.0]
+  def change
+    change_column_default :positions, :acc_w, from: nil, to: 0
+    change_column_default :positions, :agi_w, from: nil, to: 0
+    change_column_default :positions, :bal_w, from: nil, to: 0
+    change_column_default :positions, :jum_w, from: nil, to: 0
+    change_column_default :positions, :nat_w, from: nil, to: 0
+    change_column_default :positions, :pac_w, from: nil, to: 0
+    change_column_default :positions, :sta_w, from: nil, to: 0
+    change_column_default :positions, :str_w, from: nil, to: 0
+    change_column_default :positions, :agg_w, from: nil, to: 0
+    change_column_default :positions, :ant_w, from: nil, to: 0
+    change_column_default :positions, :bra_w, from: nil, to: 0
+    change_column_default :positions, :com_w, from: nil, to: 0
+    change_column_default :positions, :con_w, from: nil, to: 0
+    change_column_default :positions, :dec_w, from: nil, to: 0
+    change_column_default :positions, :det_w, from: nil, to: 0
+    change_column_default :positions, :fla_w, from: nil, to: 0
+    change_column_default :positions, :lea_w, from: nil, to: 0
+    change_column_default :positions, :otb_w, from: nil, to: 0
+    change_column_default :positions, :pos_w, from: nil, to: 0
+    change_column_default :positions, :tea_w, from: nil, to: 0
+    change_column_default :positions, :vis_w, from: nil, to: 0
+    change_column_default :positions, :wor_w, from: nil, to: 0
+    change_column_default :positions, :cor_w, from: nil, to: 0
+    change_column_default :positions, :cro_w, from: nil, to: 0
+    change_column_default :positions, :dri_w, from: nil, to: 0
+    change_column_default :positions, :fin_w, from: nil, to: 0
+    change_column_default :positions, :fir_w, from: nil, to: 0
+    change_column_default :positions, :fre_w, from: nil, to: 0
+    change_column_default :positions, :hea_w, from: nil, to: 0
+    change_column_default :positions, :lon_w, from: nil, to: 0
+    change_column_default :positions, :lth_w, from: nil, to: 0
+    change_column_default :positions, :mar_w, from: nil, to: 0
+    change_column_default :positions, :pas_w, from: nil, to: 0
+    change_column_default :positions, :pen_w, from: nil, to: 0
+    change_column_default :positions, :tac_w, from: nil, to: 0
+    change_column_default :positions, :tec_w, from: nil, to: 0
+    change_column_default :positions, :gk_aer_w, from: nil, to: 0
+    change_column_default :positions, :gk_car_w, from: nil, to: 0
+    change_column_default :positions, :gk_com_w, from: nil, to: 0
+    change_column_default :positions, :gk_ecc_w, from: nil, to: 0
+    change_column_default :positions, :gk_han_w, from: nil, to: 0
+    change_column_default :positions, :gk_kic_w, from: nil, to: 0
+    change_column_default :positions, :gk_one_w, from: nil, to: 0
+    change_column_default :positions, :gk_ref_w, from: nil, to: 0
+    change_column_default :positions, :gk_rus_w, from: nil, to: 0
+    change_column_default :positions, :gk_pun_w, from: nil, to: 0
+    change_column_default :positions, :gk_thr_w, from: nil, to: 0
+    change_column_default :positions, :ccy_w, from: nil, to: 0
+    change_column_default :positions, :dir_w, from: nil, to: 0
+    change_column_default :positions, :imp_w, from: nil, to: 0
+    change_column_default :positions, :inj_w, from: nil, to: 0
+    change_column_default :positions, :position_w, from: nil, to: 3
+  end
+end

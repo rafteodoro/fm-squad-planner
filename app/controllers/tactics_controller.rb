@@ -18,6 +18,8 @@ class TacticsController < ApplicationController
 
   def show
     @tactic = Tactic.find(params[:id])
+    positions_order = %w[GK DR DC DL WBR DM WBL MR MC ML AMR AMC AML ST]
+    @positions = @tactic.positions.in_order_of(:name, positions_order).all
   end
 
   private

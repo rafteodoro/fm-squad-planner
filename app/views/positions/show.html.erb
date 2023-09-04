@@ -1,0 +1,255 @@
+<div class="container">
+  <div class="d-inline-flex p-2 align-items-center">
+    <h1><%= @position.name %></h1>
+    <h5 class="mx-3"><%= @position.mentality %></h5>
+    <h5><%= @position.role %></h5>
+  </div>
+  <p>
+    <%= link_to 'back', tactic_path(@tactic), class:"btn btn-sm btn-secondary" %>
+  </p>
+
+  <div class="row">
+  <h5>ATTRIBUTE WEIGHT</h5>
+    <div class="col">
+      <h5>TECHNICAL</h5>
+      <table class="table table-striped">
+        <tbody>
+          <tr>
+            <td>Corners</td>
+            <td><%= @position.cor_w %></td>
+          </tr>
+          <tr>
+            <td>Crossing</td>
+            <td><%= @position.cro_w %></td>
+          </tr>
+          <tr>
+            <td>Dribbling</td>
+            <td><%= @position.dri_w %></td>
+          </tr>
+          <tr>
+            <td>Finishing</td>
+            <td><%= @position.fin_w %></td>
+          </tr>
+          <tr>
+            <td>First Touch</td>
+            <td><%= @position.fir_w %></td>
+          </tr>
+          <tr>
+            <td>Free Kick Taking</td>
+            <td><%= @position.fre_w %></td>
+          </tr>
+          <tr>
+            <td>Heading</td>
+            <td><%= @position.hea_w %></td>
+          </tr>
+          <tr>
+            <td>Long Shots</td>
+            <td><%= @position.lon_w %></td>
+          </tr>
+          <tr>
+            <td>Long Throws</td>
+            <td><%= @position.lth_w %></td>
+          </tr>
+          <tr>
+            <td>Marking</td>
+            <td><%= @position.mar_w %></td>
+          </tr>
+          <tr>
+            <td>Passing</td>
+            <td><%= @position.pas_w %></td>
+          </tr>
+          <tr>
+            <td>Penalty Taking</td>
+            <td><%= @position.pen_w %></td>
+          </tr>
+          <tr>
+            <td>Tackling</td>
+            <td><%= @position.tac_w %></td>
+          </tr>
+          <tr>
+            <td>Technique</td>
+            <td><%= @position.tec_w %></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col">
+      <h5>MENTAL</h5>
+      <table class="table table-striped">
+        <tbody>
+          <tr>
+            <td>Aggression</td>
+            <td><%= @position.agg_w %></td>
+          </tr>
+          <tr>
+            <td>Anticipation</td>
+            <td><%= @position.ant_w %></td>
+          </tr>
+          <tr>
+            <td>Bravery</td>
+            <td><%= @position.bra_w %></td>
+          </tr>
+          <tr>
+            <td>Composure</td>
+            <td><%= @position.com_w %></td>
+          </tr>
+          <tr>
+            <td>Concentration</td>
+            <td><%= @position.con_w %></td>
+          </tr>
+          <tr>
+            <td>Decisions</td>
+            <td><%= @position.dec_w %></td>
+          </tr>
+          <tr>
+            <td>Determination</td>
+            <td><%= @position.det_w %></td>
+          </tr>
+          <tr>
+            <td>Flair</td>
+            <td><%= @position.fla_w %></td>
+          </tr>
+          <tr>
+            <td>Leadership</td>
+            <td><%= @position.lea_w %></td>
+          </tr>
+          <tr>
+            <td>Off The Ball</td>
+            <td><%= @position.otb_w %></td>
+          </tr>
+          <tr>
+            <td>Positioning</td>
+            <td><%= @position.pos_w %></td>
+          </tr>
+          <tr>
+            <td>Teamwork</td>
+            <td><%= @position.tea_w %></td>
+          </tr>
+          <tr>
+            <td>Vision</td>
+            <td><%= @position.vis_w %></td>
+          </tr>
+          <tr>
+            <td>Work Rate</td>
+            <td><%= @position.wor_w %></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col">
+      <h5>PHYSICAL</h5>
+      <table class="table table-striped">
+        <tbody>
+          <tr>
+            <td>Acceleration</td>
+            <td><%= @position.acc_w %></td>
+          </tr>
+          <tr>
+            <td>Agility</td>
+            <td><%= @position.agi_w %></td>
+          </tr>
+          <tr>
+            <td>Balance</td>
+            <td><%= @position.bal_w %></td>
+          </tr>
+          <tr>
+            <td>Jumping Reach</td>
+            <td><%= @position.jum_w %></td>
+          </tr>
+          <tr>
+            <td>Natural Fitness</td>
+            <td><%= @position.nat_w %></td>
+          </tr>
+          <tr>
+            <td>Pace</td>
+            <td><%= @position.pac_w %></td>
+          </tr>
+          <tr>
+            <td>Stamina</td>
+            <td><%= @position.sta_w %></td>
+          </tr>
+          <tr>
+            <td>Strength</td>
+            <td><%= @position.str_w %></td>
+          </tr>
+          <tr>
+            <td>Consistency</td>
+            <td><%= @position.ccy_w %></td>
+          </tr>
+          <tr>
+            <td>Dirtiness</td>
+            <td><%= @position.dir_w %></td>
+          </tr>
+          <tr>
+            <td>Important Matches</td>
+            <td><%= @position.imp_w %></td>
+          </tr>
+          <tr>
+            <td>Injury Proneness</td>
+            <td><%= @position.inj_w %></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col">
+      <h5>GOALKEEPER</h5>
+      <table class="table table-striped">
+        <tbody>
+          <tr>
+            <td>Aerial Reach</td>
+            <td><%= @position.gk_aer_w %></td>
+          </tr>
+          <tr>
+            <td>Command of Area</td>
+            <td><%= @position.gk_car_w %></td>
+          </tr>
+          <tr>
+            <td>Communication</td>
+            <td><%= @position.gk_com_w %></td>
+          </tr>
+          <tr>
+            <td>Eccentricity</td>
+            <td><%= @position.gk_ecc_w %></td>
+          </tr>
+          <tr>
+            <td>First Touch</td>
+            <td><%= @position.fir_w %></td>
+          </tr>
+          <tr>
+            <td>Handling</td>
+            <td><%= @position.gk_han_w %></td>
+          </tr>
+          <tr>
+            <td>Kicking</td>
+            <td><%= @position.gk_kic_w %></td>
+          </tr>
+          <tr>
+            <td>One on Ones</td>
+            <td><%= @position.gk_one_w %></td>
+          </tr>
+          <tr>
+            <td>Passing</td>
+            <td><%= @position.pas_w %></td>
+          </tr>
+          <tr>
+            <td>Punching (Tendency)</td>
+            <td><%= @position.gk_pun_w %></td>
+          </tr>
+          <tr>
+            <td>Reflexes</td>
+            <td><%= @position.gk_ref_w %></td>
+          </tr>
+          <tr>
+            <td>Rushing Out (Tendency)</td>
+            <td><%= @position.gk_rus_w %></td>
+          </tr>
+          <tr>
+            <td>Throwing</td>
+            <td><%= @position.gk_thr_w %></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</div>

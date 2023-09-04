@@ -2,7 +2,7 @@
   <h1>Add position</h1>
   <%= link_to 'Back', tactic_path(@tactic), class:"btn btn-sm btn-secondary" %>
   <hr>
-  <%= simple_form_for(@position) do |form| %>
+  <%= simple_form_for([@tactic, @position]) do |form| %>
     <p><strong>General Info</strong></p>
     <div class="row">
       <div class="col-4">
@@ -12,7 +12,7 @@
         <%= form.input :role %>
       </div>
       <div class="col-4">
-        <%= form.input :mentality %>
+        <%= form.input :mentality, :collection => %w[Defend Support Attack Stopper Cover] %>
       </div>
     </div>
     <hr>
@@ -20,35 +20,122 @@
       <div class="col-3">
         <p><strong>Technical</strong></p>
         <%= form.label :cor_w, "Corners" %>
-        <%= form.input :cor_w, label: false %>
+        <%= form.input :cor_w, label: false, :collection => %w[0.5 0.7 1] %>
         <%= form.label :cro_w, "Crossing" %>
-        <%= form.input :cro_w, label: false %>
+        <%= form.input :cro_w, label: false, :collection => %w[0.5 0.7 1] %>
         <%= form.label :dri_w, "Dribbling" %>
-        <%= form.input :dri_w, label: false %>
+        <%= form.input :dri_w, label: false, :collection => %w[0.5 0.7 1] %>
         <%= form.label :fin_w, "Finishing" %>
-        <%= form.input :fin_w, label: false %>
+        <%= form.input :fin_w, label: false, :collection => %w[0.5 0.7 1] %>
         <%= form.label :fir_w, "First Touch" %>
-        <%= form.input :fir_w, label: false %>
+        <%= form.input :fir_w, label: false, :collection => %w[0.5 0.7 1] %>
         <%= form.label :fre_w, "Free Kick Taking" %>
-        <%= form.input :fre_w, label: false %>
+        <%= form.input :fre_w, label: false, :collection => %w[0.5 0.7 1] %>
         <%= form.label :hea_w, "Heading" %>
-        <%= form.input :hea_w, label: false %>
+        <%= form.input :hea_w, label: false, :collection => %w[0.5 0.7 1] %>
         <%= form.label :lon_w, "Long Shots" %>
-        <%= form.input :lon_w, label: false %>
+        <%= form.input :lon_w, label: false, :collection => %w[0.5 0.7 1] %>
         <%= form.label :lth_w, "Long Throws" %>
-        <%= form.input :lth_w, label: false %>
+        <%= form.input :lth_w, label: false, :collection => %w[0.5 0.7 1] %>
         <%= form.label :mar_w, "Marking" %>
-        <%= form.input :mar_w, label: false %>
+        <%= form.input :mar_w, label: false, :collection => %w[0.5 0.7 1] %>
         <%= form.label :pas_w, "Passing" %>
-        <%= form.input :pas_w, label: false %>
+        <%= form.input :pas_w, label: false, :collection => %w[0.5 0.7 1] %>
         <%= form.label :pen_w, "Penalty Taking" %>
-        <%= form.input :pen_w, label: false %>
+        <%= form.input :pen_w, label: false, :collection => %w[0.5 0.7 1] %>
         <%= form.label :tac_w, "Tackling" %>
-        <%= form.input :tac_w, label: false %>
+        <%= form.input :tac_w, label: false, :collection => %w[0.5 0.7 1] %>
         <%= form.label :tec_w, "Technique" %>
-        <%= form.input :tec_w, label: false %>
+        <%= form.input :tec_w, label: false, :collection => %w[0.5 0.7 1] %>
       </div>
-      
+      <div class="col-3">
+        <p><strong>Mental</strong></p>
+        <%= form.label :agg_w, "Aggression" %>
+        <%= form.input :agg_w, label: false, :collection => %w[0.5 0.7 1] %>
+        <%= form.label :ant_w, "Anticipation" %>
+        <%= form.input :ant_w, label: false, :collection => %w[0.5 0.7 1] %>
+        <%= form.label :bra_w, "Bravery" %>
+        <%= form.input :bra_w, label: false, :collection => %w[0.5 0.7 1] %>
+        <%= form.label :com_w, "Composure" %>
+        <%= form.input :com_w, label: false, :collection => %w[0.5 0.7 1] %>
+        <%= form.label :con_w, "Concentration" %>
+        <%= form.input :con_w, label: false, :collection => %w[0.5 0.7 1] %>
+        <%= form.label :dec_w, "Decision" %>
+        <%= form.input :dec_w, label: false, :collection => %w[0.5 0.7 1] %>
+        <%= form.label :det_w, "Determination" %>
+        <%= form.input :det_w, label: false, :collection => %w[0.5 0.7 1] %>
+        <%= form.label :fla_w, "Flair" %>
+        <%= form.input :fla_w, label: false, :collection => %w[0.5 0.7 1] %>
+        <%= form.label :lea_w, "Leadership" %>
+        <%= form.input :lea_w, label: false, :collection => %w[0.5 0.7 1] %>
+        <%= form.label :otb_w, "Off the Ball" %>
+        <%= form.input :otb_w, label: false, :collection => %w[0.5 0.7 1] %>
+        <%= form.label :pos_w, "Positioning" %>
+        <%= form.input :pos_w, label: false, :collection => %w[0.5 0.7 1] %>
+        <%= form.label :tea_w, "Teamwork" %>
+        <%= form.input :tea_w, label: false, :collection => %w[0.5 0.7 1] %>
+        <%= form.label :vis_w, "Vision" %>
+        <%= form.input :vis_w, label: false, :collection => %w[0.5 0.7 1] %>
+        <%= form.label :wor_w, "Work Rate" %>
+        <%= form.input :wor_w, label: false, :collection => %w[0.5 0.7 1] %>
+      </div>
+      <div class="col-3">
+        <p><strong>Physical</strong></p>
+        <%= form.label :acc_w, "Acceleration" %>
+        <%= form.input :acc_w, label: false, :collection => %w[0.5 0.7 1] %>
+        <%= form.label :agi_w, "Agility" %>
+        <%= form.input :agi_w, label: false, :collection => %w[0.5 0.7 1] %>
+        <%= form.label :bal_w, "Balance" %>
+        <%= form.input :bal_w, label: false, :collection => %w[0.5 0.7 1] %>
+        <%= form.label :jum_w, "Jumping Reach" %>
+        <%= form.input :jum_w, label: false, :collection => %w[0.5 0.7 1] %>
+        <%= form.label :nat_w, "Natural Fitness" %>
+        <%= form.input :nat_w, label: false, :collection => %w[0.5 0.7 1] %>
+        <%= form.label :pac_w, "Pace" %>
+        <%= form.input :pac_w, label: false, :collection => %w[0.5 0.7 1] %>
+        <%= form.label :sta_w, "Stamina" %>
+        <%= form.input :sta_w, label: false, :collection => %w[0.5 0.7 1] %>
+        <%= form.label :str_w, "Strength" %>
+        <%= form.input :str_w, label: false, :collection => %w[0.5 0.7 1] %>
+        <%= form.label :ccy_w, "Consistency" %>
+        <%= form.input :ccy_w, label: false, :collection => %w[0.5 0.7 1] %>
+        <%= form.label :dir_w, "Dirtiness" %>
+        <%= form.input :dir_w, label: false, :collection => %w[0.5 0.7 1] %>
+        <%= form.label :imp_w, "Important Matches" %>
+        <%= form.input :imp_w, label: false, :collection => %w[0.5 0.7 1] %>
+        <%= form.label :inj_w, "Injury Proneness" %>
+        <%= form.input :inj_w, label: false, :collection => %w[0.5 0.7 1] %>
+      </div>
+      <div class="col-3">
+        <p><strong>Goalkeeper</strong></p>
+        <%= form.label :gk_aer_w, "Aerial Reach" %>
+        <%= form.input :gk_aer_w, label: false, :collection => %w[0.5 0.7 1] %>
+        <%= form.label :gk_car_w, "Command of Area" %>
+        <%= form.input :gk_car_w, label: false, :collection => %w[0.5 0.7 1] %>
+        <%= form.label :gk_com_w, "Communication" %>
+        <%= form.input :gk_com_w, label: false, :collection => %w[0.5 0.7 1] %>
+        <%= form.label :gk_ecc_w, "Eccentricity" %>
+        <%= form.input :gk_ecc_w, label: false, :collection => %w[0.5 0.7 1] %>
+        <%= form.label :fir_w, "First Touch" %>
+        <%= form.input :fir_w, label: false, :collection => %w[0.5 0.7 1] %>
+        <%= form.label :gk_han_w, "Handling" %>
+        <%= form.input :gk_han_w, label: false, :collection => %w[0.5 0.7 1] %>
+        <%= form.label :gk_kic_w, "Kicking" %>
+        <%= form.input :gk_kic_w, label: false, :collection => %w[0.5 0.7 1] %>
+        <%= form.label :gk_one_w, "One on Ones" %>
+        <%= form.input :gk_one_w, label: false, :collection => %w[0.5 0.7 1] %>
+        <%= form.label :pas_w, "Passing" %>
+        <%= form.input :pas_w, label: false, :collection => %w[0.5 0.7 1] %>
+        <%= form.label :gk_pun_w, "Punching (Tendency)" %>
+        <%= form.input :gk_pun_w, label: false, :collection => %w[0.5 0.7 1] %>
+        <%= form.label :gk_ref_w, "Reflexes" %>
+        <%= form.input :gk_ref_w, label: false, :collection => %w[0.5 0.7 1] %>
+        <%= form.label :gk_rus_w, "Rushing Out (Tendency)" %>
+        <%= form.input :gk_rus_w, label: false, :collection => %w[0.5 0.7 1] %>
+        <%= form.label :gk_thr_w, "Throwing" %>
+        <%= form.input :gk_thr_w, label: false, :collection => %w[0.5 0.7 1] %>
+      </div>
+
     <%= form.button :submit, class:"btn btn-sm btn-primary" %>
   <% end %>
 </div>
