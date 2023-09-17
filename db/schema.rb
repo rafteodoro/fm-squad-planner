@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_09_03_223338) do
+ActiveRecord::Schema[7.0].define(version: 2023_09_17_152351) do
   create_table "articles", force: :cascade do |t|
     t.string "title"
     t.text "body"
@@ -64,6 +64,10 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_03_223338) do
     t.integer "pace"
     t.integer "stamina"
     t.integer "strength"
+    t.integer "h_consistency"
+    t.integer "h_important_matches"
+    t.integer "h_injury_proneness"
+    t.integer "h_dirtiness"
   end
 
   create_table "positions", force: :cascade do |t|
@@ -128,11 +132,11 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_03_223338) do
     t.index ["tactic_id"], name: "index_positions_on_tactic_id"
   end
 
-  create_table 'tactics', force: :cascade do |t|
-    t.string 'name', null: false
-    t.datetime 'created_at', null: false
-    t.datetime 'updated_at', null: false
+  create_table "tactics", force: :cascade do |t|
+    t.string "name", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
-  add_foreign_key 'positions', 'tactics'
+  add_foreign_key "positions", "tactics"
 end

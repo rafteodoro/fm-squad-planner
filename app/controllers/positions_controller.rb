@@ -3,9 +3,9 @@
 # Purpose: Controller for the Position model.
 class PositionsController < ApplicationController
   before_action :set_tactic, only: %i[new create]
+  before_action :set_position, only: %i[show destroy]
 
   def show
-    @position = Position.find(params[:id])
     @tactic = Tactic.find(@position.tactic_id)
   end
 
@@ -21,6 +21,11 @@ class PositionsController < ApplicationController
     else
       render :new, status: :unprocessable_entity
     end
+  end
+
+  def destroy
+    @position.destroy
+    redirect_to tactic_path(@position.tactic)
   end
 
   private
@@ -39,5 +44,9 @@ class PositionsController < ApplicationController
 
   def set_tactic
     @tactic = Tactic.find(params[:tactic_id])
+  end
+
+  def set_position
+    @position = Position.find(params[:id])
   end
 end

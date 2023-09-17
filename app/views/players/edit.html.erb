@@ -1,0 +1,192 @@
+<div class="container">
+  <%= simple_form_for(@player) do |f| %>
+    <div class="row">
+      <h1><%= @player.name %></h1>
+      <h5><%= @player.position %></h5>
+    </div>
+    <div class="row">
+      <div class="col">
+        <h5>TECHNICAL</h5>
+        <table class="table table-striped">
+          <tbody>
+            <tr>
+              <td>Corners</td>
+              <td><%= f.input :corners, label:false %></td>
+            </tr>
+            <tr>
+              <td>Crossing</td>
+              <td><%= f.input :crossing, label:false %></td>
+            </tr>
+            <tr>
+              <td>Dribbling</td>
+              <td><%= f.input :dribbling, label:false %></td>
+            </tr>
+            <tr>
+              <td>Finishing</td>
+              <td><%= f.input :finishing, label:false %></td>
+            </tr>
+            <tr>
+              <td>First Touch</td>
+              <td><%= f.input :first_touch, label:false %></td>
+            </tr>
+            <tr>
+              <td>Free Kick Taking</td>
+              <td><%= f.input :free_kicks, label:false %></td>
+            </tr>
+            <tr>
+              <td>Heading</td>
+              <td><%= f.input :heading, label:false %></td>
+            </tr>
+            <tr>
+              <td>Long Shots</td>
+              <td><%= f.input :long_shots, label:false %></td>
+            </tr>
+            <tr>
+              <td>Long Throws</td>
+              <td><%= f.input :long_throw, label:false %></td>
+            </tr>
+            <tr>
+              <td>Marking</td>
+              <td><%= f.input :marking, label:false %></td>
+            </tr>
+            <tr>
+              <td>Passing</td>
+              <td><%= f.input :passing, label:false %></td>
+            </tr>
+            <tr>
+              <td>Penalty Taking</td>
+              <td><%= f.input :penalty_taking, label:false %></td>
+            </tr>
+            <tr>
+              <td>Tackling</td>
+              <td><%= f.input :tackling, label:false %></td>
+            </tr>
+            <tr>
+              <td>Technique</td>
+              <td><%= f.input :technique, label:false %></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="col">
+        <h5>MENTAL</h5>
+        <table class="table table-striped">
+          <tbody>
+            <tr>
+              <td>Aggression</td>
+              <td><%= f.input :aggression, label:false %></td>
+            </tr>
+            <tr>
+              <td>Anticipation</td>
+              <td><%= f.input :anticipation, label:false %></td>
+            </tr>
+            <tr>
+              <td>Bravery</td>
+              <td><%= f.input :bravery, label:false %></td>
+            </tr>
+            <tr>
+              <td>Composure</td>
+              <td><%= f.input :composure, label:false %></td>
+            </tr>
+            <tr>
+              <td>Concentration</td>
+              <td><%= f.input :concentration, label:false %></td>
+            </tr>
+            <tr>
+              <td>Decisions</td>
+              <td><%= f.input :decisions, label:false %></td>
+            </tr>
+            <tr>
+              <td>Determination</td>
+              <td><%= f.input :determination, label:false %></td>
+            </tr>
+            <tr>
+              <td>Flair</td>
+              <td><%= f.input :flair, label:false %></td>
+            </tr>
+            <tr>
+              <td>Leadership</td>
+              <td><%= f.input :leadership, label:false %></td>
+            </tr>
+            <tr>
+              <td>Off The Ball</td>
+              <td><%= f.input :off_the_ball, label:false %></td>
+            </tr>
+            <tr>
+              <td>Positioning</td>
+              <td><%= f.input :positioning, label:false %></td>
+            </tr>
+            <tr>
+              <td>Teamwork</td>
+              <td><%= f.input :teamwork, label:false %></td>
+            </tr>
+            <tr>
+              <td>Vision</td>
+              <td><%= f.input :vision, label:false %></td>
+            </tr>
+            <tr>
+              <td>Work Rate</td>
+              <td><%= f.input :work_rate, label:false %></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="col">
+        <h5>PHYSICAL</h5>
+        <table class="table table-striped">
+          <tbody>
+            <tr>
+              <td>Acceleration</td>
+              <td><%= f.input :acceleration, label:false %></td>
+            </tr>
+            <tr>
+              <td>Agility</td>
+              <td><%= f.input :agility, label:false %></td>
+            </tr>
+            <tr>
+              <td>Balance</td>
+              <td><%= f.input :balance, label:false %></td>
+            </tr>
+            <tr>
+              <td>Jumping Reach</td>
+              <td><%= f.input :jumping, label:false %></td>
+            </tr>
+            <tr>
+              <td>Natural Fitness</td>
+              <td><%= f.input :natural_fitness, label:false %></td>
+            </tr>
+            <tr>
+              <td>Pace</td>
+              <td><%= f.input :pace, label:false %></td>
+            </tr>
+            <tr>
+              <td>Stamina</td>
+              <td><%= f.input :stamina, label:false %></td>
+            </tr>
+            <tr>
+              <td>Strength</td>
+              <td><%= f.input :strength, label:false %></td>
+            </tr>
+            <tr>
+              <td>Consistency</td>
+              <td><%= f.input :h_consistency, label:false %></td>
+            </tr>
+            <tr>
+              <td>Dirtiness</td>
+              <td><%= f.input :h_dirtiness, label:false %></td>
+            </tr>
+            <tr>
+              <td>Important Matches</td>
+              <td><%= f.input :h_important_matches, label:false %></td>
+            </tr>
+            <tr>
+              <td>Injury Proneness</td>
+              <td><%= f.input :h_injury_proneness, label:false %></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    <%= f.submit 'save', class: "btn btn-sm btn-success" %>
+    </div>
+  <% end %>
+</div>

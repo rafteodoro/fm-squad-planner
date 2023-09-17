@@ -2,6 +2,7 @@
   <h1><%= @tactic.name %></h1>
   <%= link_to 'Back', tactics_path, class:"btn btn-sm btn-secondary" %>
   <%= link_to 'Add position', new_tactic_position_path(@tactic), class:"btn btn-sm btn-primary" %>
+  <%= link_to 'Evaluate!', evaluate_tactic_path(@tactic), class:"btn btn-sm btn-success" %>
 
   <table class="table table-striped">
     <thead>

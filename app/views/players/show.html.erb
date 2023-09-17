@@ -1,6 +1,9 @@
 <div class="container">
   <div class="row">
-    <h1><%= @player.name %></h1>
+    <h1>
+      <%= @player.name %>
+      <%= link_to 'edit', edit_player_path(@player), class:"btn btn-sm btn-secondary" %>
+    </h1>
     <h5><%= @player.position %></h5>
     <h5><%= @player.age %> years old</h5>
   </div>
@@ -175,6 +178,22 @@
           <tr>
             <td>Left Foot</td>
             <td><%= @player.foot_left %></td>
+          </tr>
+          <tr>
+            <td>Consistency</td>
+            <td><%= @player.h_consistency %></td>
+          </tr>
+          <tr>
+            <td>Dirtiness</td>
+            <td><%= @player.h_dirtiness %></td>
+          </tr>
+          <tr>
+            <td>Important Matches</td>
+            <td><%= @player.h_important_matches %></td>
+          </tr>
+          <tr>
+            <td>Injury Proneness</td>
+            <td><%= @player.h_injury_proneness %></td>
           </tr>
         </tbody>
       </table>

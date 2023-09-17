@@ -18,4 +18,6 @@ Rails.application.routes.draw do
   end
 
   resources :positions, only: %i[index show edit update destroy]
+
+  get '/tactics/:id/evaluate', to: 'tactics#evaluate', as: 'evaluate_tactic'
 end

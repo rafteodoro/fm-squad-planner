@@ -22,6 +22,10 @@ class TacticsController < ApplicationController
     @positions = @tactic.positions.in_order_of(:name, positions_order).all
   end
 
+  def evaluate
+
+  end
+
   private
 
   def tactic_params
