@@ -1,0 +1,37 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  gk: 1
+  sw: 1
+  dc: 1
+  dr: 1
+  dl: 1
+  dm: 1
+  wbr: 1
+  wbl: 1
+  mc: 1
+  mr: 1
+  ml: 1
+  amc: 1
+  amr: 1
+  aml: 1
+  st: 1
+  player: one
+
+two:
+  gk: 1
+  sw: 1
+  dc: 1
+  dr: 1
+  dl: 1
+  dm: 1
+  wbr: 1
+  wbl: 1
+  mc: 1
+  mr: 1
+  ml: 1
+  amc: 1
+  amr: 1
+  aml: 1
+  st: 1
+  player: two
