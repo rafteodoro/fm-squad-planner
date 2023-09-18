@@ -3,6 +3,7 @@
 # Player model is the main model for the app. It contains all the attributes of a player.
 # It also contains validations for the attributes.
 class Player < ApplicationRecord
+  has_one :posmap, dependent: :destroy
   validates :name, presence: true
   validates :uid, uniqueness: true, presence: true
 end

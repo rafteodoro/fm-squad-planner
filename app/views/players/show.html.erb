@@ -3,6 +3,7 @@
     <h1>
       <%= @player.name %>
       <%= link_to 'edit', edit_player_path(@player), class:"btn btn-sm btn-secondary" %>
+      <%= link_to 'position map', new_player_posmap_path(@player), class:"btn btn-sm btn-success" %>
     </h1>
     <h5><%= @player.position %></h5>
     <h5><%= @player.age %> years old</h5>

@@ -8,6 +8,7 @@ Rails.application.routes.draw do
 
   # Creates the route for the import for the CSV file
   resources :players do
+    resources :posmaps, only: %i[new create]
     collection do
       post :import
     end

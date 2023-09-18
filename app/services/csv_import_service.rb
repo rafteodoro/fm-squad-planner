@@ -37,7 +37,7 @@ class CsvImportService
     player_hash[:free_kicks] = row['Free Kicks'].to_i
     player_hash[:heading] = row['Heading'].to_i
     player_hash[:long_shots] = row['Long Shots'].to_i
-    player_hash[:long_throw] = row['Long Throws'].to_i
+    player_hash[:long_throw] = row['Long Throw'].to_i
     player_hash[:marking] = row['Marking'].to_i
     player_hash[:passing] = row['Passing'].to_i
     player_hash[:penalty_taking] = row['Penalty Taking'].to_i
@@ -57,7 +57,7 @@ class CsvImportService
     player_hash[:determination] = row['Determination'].to_i
     player_hash[:flair] = row['Flair'].to_i
     player_hash[:leadership] = row['Leadership'].to_i
-    player_hash[:off_the_ball] = row['Off The Ball'].to_i
+    player_hash[:off_the_ball] = row['Off the Ball'].to_i
     player_hash[:positioning] = row['Positioning'].to_i
     player_hash[:teamwork] = row['Teamwork'].to_i
     player_hash[:vision] = row['Vision'].to_i

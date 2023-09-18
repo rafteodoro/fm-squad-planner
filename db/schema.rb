@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_09_17_152351) do
+ActiveRecord::Schema[7.0].define(version: 2023_09_18_191609) do
   create_table "articles", force: :cascade do |t|
     t.string "title"
     t.text "body"
@@ -132,6 +132,28 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_17_152351) do
     t.index ["tactic_id"], name: "index_positions_on_tactic_id"
   end
 
+  create_table "posmaps", force: :cascade do |t|
+    t.integer "gk"
+    t.integer "sw"
+    t.integer "dc"
+    t.integer "dr"
+    t.integer "dl"
+    t.integer "dm"
+    t.integer "wbr"
+    t.integer "wbl"
+    t.integer "mc"
+    t.integer "mr"
+    t.integer "ml"
+    t.integer "amc"
+    t.integer "amr"
+    t.integer "aml"
+    t.integer "st"
+    t.integer "player_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["player_id"], name: "index_posmaps_on_player_id"
+  end
+
   create_table "tactics", force: :cascade do |t|
     t.string "name", null: false
     t.datetime "created_at", null: false
@@ -139,4 +161,5 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_17_152351) do
   end
 
   add_foreign_key "positions", "tactics"
+  add_foreign_key "posmaps", "players"
 end
