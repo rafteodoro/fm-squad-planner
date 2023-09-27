@@ -9,7 +9,7 @@ class PosmapsController < ApplicationController
     @posmap = Posmap.new(posmap_params)
     @posmap.player = @player
     if @posmap.save
-      redirect_to @posmap
+      redirect_to @player
     else
       render 'new', status: :unprocessable_entity
     end

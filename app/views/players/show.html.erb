@@ -9,69 +9,129 @@
     <h5><%= @player.age %> years old</h5>
   </div>
   <div class="row">
-  <h5>ATTRIBUTES</h5>
+    <h5>ATTRIBUTES</h5>
     <div class="col">
-      <h5>TECHNICAL</h5>
-      <table class="table table-striped">
-        <tbody>
-          <tr>
-            <td>Corners</td>
-            <td><%= @player.corners %></td>
-          </tr>
-          <tr>
-            <td>Crossing</td>
-            <td><%= @player.crossing %></td>
-          </tr>
-          <tr>
-            <td>Dribbling</td>
-            <td><%= @player.dribbling %></td>
-          </tr>
-          <tr>
-            <td>Finishing</td>
-            <td><%= @player.finishing %></td>
-          </tr>
-          <tr>
-            <td>First Touch</td>
-            <td><%= @player.first_touch %></td>
-          </tr>
-          <tr>
-            <td>Free Kick Taking</td>
-            <td><%= @player.free_kicks %></td>
-          </tr>
-          <tr>
-            <td>Heading</td>
-            <td><%= @player.heading %></td>
-          </tr>
-          <tr>
-            <td>Long Shots</td>
-            <td><%= @player.long_shots %></td>
-          </tr>
-          <tr>
-            <td>Long Throws</td>
-            <td><%= @player.long_throw %></td>
-          </tr>
-          <tr>
-            <td>Marking</td>
-            <td><%= @player.marking %></td>
-          </tr>
-          <tr>
-            <td>Passing</td>
-            <td><%= @player.passing %></td>
-          </tr>
-          <tr>
-            <td>Penalty Taking</td>
-            <td><%= @player.penalty_taking %></td>
-          </tr>
-          <tr>
-            <td>Tackling</td>
-            <td><%= @player.tackling %></td>
-          </tr>
-          <tr>
-            <td>Technique</td>
-            <td><%= @player.technique %></td>
-          </tr>
-        </tbody>
-      </table>
+      <% if @player.position == "GK" %>
+        <h5>GOALKEEPING</h5>
+        <table class="table table-striped">
+          <tbody>
+            <tr>
+              <td>Aerial Reach</td>
+              <td class="attribute"><%= @player.aerial_reach %></td>
+            </tr>
+            <tr>
+              <td>Command of Area</td>
+              <td class="attribute"><%= @player.command_of_area %></td>
+            </tr>
+            <tr>
+              <td>Communication</td>
+              <td class="attribute"><%= @player.communication %></td>
+            </tr>
+            <tr>
+              <td>Eccentricity</td>
+              <td class="attribute"><%= @player.eccentricity %></td>
+            </tr>
+            <tr>
+              <td>First Touch</td>
+              <td class="attribute"><%= @player.first_touch %></td>
+            </tr>
+            <tr>
+              <td>Handling</td>
+              <td class="attribute"><%= @player.handling %></td>
+            </tr>
+            <tr>
+              <td>Kicking</td>
+              <td><%= @player.kicking %></td>
+            </tr>
+            <tr>
+              <td>One on Ones</td>
+              <td><%= @player.one_on_ones %></td>
+            </tr>
+            <tr>
+              <td>Passing</td>
+              <td><%= @player.passing %></td>
+            </tr>
+            <tr>
+              <td>Punching (Tendency)</td>
+              <td><%= @player.punching %></td>
+            </tr>
+            <tr>
+              <td>Reflexes</td>
+              <td><%= @player.reflexes %></td>
+            </tr>
+            <tr>
+              <td>Rushing Out (Tendency)</td>
+              <td><%= @player.rushing_out %></td>
+            </tr>
+            <tr>
+              <td>Throwing</td>
+              <td><%= @player.throwing %></td>
+            </tr>
+          </tbody>
+        </table>
+      <% else %>
+        <h5>TECHNICAL</h5>
+        <table class="table table-striped">
+          <tbody>
+            <tr>
+              <td>Corners</td>
+              <td><%= @player.corners %></td>
+            </tr>
+            <tr>
+              <td>Crossing</td>
+              <td><%= @player.crossing %></td>
+            </tr>
+            <tr>
+              <td>Dribbling</td>
+              <td><%= @player.dribbling %></td>
+            </tr>
+            <tr>
+              <td>Finishing</td>
+              <td><%= @player.finishing %></td>
+            </tr>
+            <tr>
+              <td>First Touch</td>
+              <td><%= @player.first_touch %></td>
+            </tr>
+            <tr>
+              <td>Free Kick Taking</td>
+              <td><%= @player.free_kicks %></td>
+            </tr>
+            <tr>
+              <td>Heading</td>
+              <td><%= @player.heading %></td>
+            </tr>
+            <tr>
+              <td>Long Shots</td>
+              <td><%= @player.long_shots %></td>
+            </tr>
+            <tr>
+              <td>Long Throws</td>
+              <td><%= @player.long_throw %></td>
+            </tr>
+            <tr>
+              <td>Marking</td>
+              <td><%= @player.marking %></td>
+            </tr>
+            <tr>
+              <td>Passing</td>
+              <td><%= @player.passing %></td>
+            </tr>
+            <tr>
+              <td>Penalty Taking</td>
+              <td><%= @player.penalty_taking %></td>
+            </tr>
+            <tr>
+              <td>Tackling</td>
+              <td><%= @player.tackling %></td>
+            </tr>
+            <tr>
+              <td>Technique</td>
+              <td><%= @player.technique %></td>
+            </tr>
+          </tbody>
+        </table>
+      <% end %>
     </div>
     <div class="col">
       <h5>MENTAL</h5>
@@ -199,6 +259,8 @@
         </tbody>
       </table>
     </div>
-
+  </div>
+  <div class="row">
+    <div id="field"></div>
   </div>
 </div>
