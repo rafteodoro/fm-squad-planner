@@ -19,6 +19,7 @@ class CsvImportService
       player_hash = addTechnicalFields(player_hash, row)
       player_hash = addMentalFields(player_hash, row)
       player_hash = addPhysicalFields(player_hash, row)
+      player_hash = addGoalkeeperFields(player_hash, row)
 
       Player.find_or_create_by!(player_hash) if player_hash[:name].nil? == false
       # for performance, you could create a separate job to import each user
@@ -75,6 +76,22 @@ class CsvImportService
     player_hash[:pace] = row['Pace'].to_i
     player_hash[:stamina] = row['Stamina'].to_i
     player_hash[:strength] = row['Strength'].to_i
+
+    player_hash
+  end
+
+  def addGoalkeeperFields(player_hash, row)
+    player_hash[:aerial_reach] = row['Aerial Reach'].to_i
+    player_hash[:command_of_area] = row['Command Of Area'].to_i
+    player_hash[:communication] = row['Communication'].to_i
+    player_hash[:eccentricity] = row['Eccentricity'].to_i
+    player_hash[:handling] = row['Handling'].to_i
+    player_hash[:kicking] = row['Kicking'].to_i
+    player_hash[:one_on_ones] = row['One On Ones'].to_i
+    player_hash[:punching] = row['Punching'].to_i
+    player_hash[:reflexes] = row['Reflexes'].to_i
+    player_hash[:rushing_out] = row['Rushing Out'].to_i
+    player_hash[:throwing] = row['Throwing'].to_i
 
     player_hash
   end

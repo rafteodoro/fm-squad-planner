@@ -42,6 +42,7 @@ class PlayersController < ApplicationController
                                    :determination, :flair, :leadership, :off_the_ball, :positioning, :teamwork, :vision,
                                    :work_rate, :acceleration, :agility, :balance, :jumping, :natural_fitness, :pace,
                                    :stamina, :strength, :h_consistency, :h_dirtiness, :h_important_matches,
-                                   :h_injury_proneness)
+                                   :h_injury_proneness, :aerial_reach, :command_of_area, :communication, :eccentricity,
+                                   :handling, :kicking, :one_on_ones, :punching, :reflexes, :rushing_out, :throwing)
   end
 end

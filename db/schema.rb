@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_09_18_191609) do
+ActiveRecord::Schema[7.0].define(version: 2023_09_27_184216) do
   create_table "articles", force: :cascade do |t|
     t.string "title"
     t.text "body"
@@ -68,6 +68,17 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_18_191609) do
     t.integer "h_important_matches"
     t.integer "h_injury_proneness"
     t.integer "h_dirtiness"
+    t.integer "aerial_reach"
+    t.integer "command_of_area"
+    t.integer "communication"
+    t.integer "eccentricity"
+    t.integer "handling"
+    t.integer "kicking"
+    t.integer "one_on_ones"
+    t.integer "punching"
+    t.integer "reflexes"
+    t.integer "rushing_out"
+    t.integer "throwing"
   end
 
   create_table "positions", force: :cascade do |t|
