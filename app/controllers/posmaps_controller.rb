@@ -1,24 +1,22 @@
 class PosmapsController < ApplicationController
-  before_action :set_player, only: %i[new create]
+  before_action :set_posmap, only: %i[edit update]
 
-  def new
-    @posmap = Posmap.new
+  def edit
+    @player = @posmap.player
   end
 
-  def create
-    @posmap = Posmap.new(posmap_params)
-    @posmap.player = @player
-    if @posmap.save
-      redirect_to @player
+  def update
+    if @posmap.update(posmap_params)
+      redirect_to @posmap.player
     else
-      render 'new', status: :unprocessable_entity
+      render 'edit', status: :unprocessable_entity
     end
   end
 
   private
 
-  def set_player
-    @player = Player.find(params[:player_id])
+  def set_posmap
+    @posmap = Posmap.find(params[:id])
   end
 
   def posmap_params
