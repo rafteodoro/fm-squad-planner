@@ -8,7 +8,6 @@ Rails.application.routes.draw do
 
   # Creates the route for the import for the CSV file
   resources :players do
-    resources :posmaps, only: %i[new create]
     collection do
       post :import
     end
@@ -19,6 +18,7 @@ Rails.application.routes.draw do
   end
 
   resources :positions, only: %i[index show edit update destroy]
+  resources :posmaps, only: %i[edit update]
 
   get '/tactics/:id/evaluate', to: 'tactics#evaluate', as: 'evaluate_tactic'
 end

@@ -8,7 +8,9 @@ class PlayersController < ApplicationController
     @players = Player.all
   end
 
-  def show; end
+  def show
+    @posmap = Posmap.find_by(player_id: @player.id)
+  end
 
   def edit; end
 

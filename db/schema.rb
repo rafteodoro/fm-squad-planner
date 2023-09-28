@@ -10,24 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_09_27_184216) do
-  create_table "articles", force: :cascade do |t|
-    t.string "title"
-    t.text "body"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
+ActiveRecord::Schema[7.0].define(version: 2023_09_18_191609) do
   create_table "players", force: :cascade do |t|
     t.integer "uid", null: false
-    t.text "name"
+    t.string "name"
     t.integer "age"
-    t.text "position"
-    t.text "personality"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.text "foot_right"
-    t.text "foot_left"
+    t.string "position"
+    t.string "personality"
+    t.string "foot_right"
+    t.string "foot_left"
     t.integer "corners"
     t.integer "crossing"
     t.integer "dribbling"
@@ -64,10 +55,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_27_184216) do
     t.integer "pace"
     t.integer "stamina"
     t.integer "strength"
-    t.integer "h_consistency"
-    t.integer "h_important_matches"
-    t.integer "h_injury_proneness"
-    t.integer "h_dirtiness"
     t.integer "aerial_reach"
     t.integer "command_of_area"
     t.integer "communication"
@@ -79,6 +66,12 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_27_184216) do
     t.integer "reflexes"
     t.integer "rushing_out"
     t.integer "throwing"
+    t.integer "h_consistency"
+    t.integer "h_important_matches"
+    t.integer "h_injury_proneness"
+    t.integer "h_dirtiness"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "positions", force: :cascade do |t|
@@ -144,21 +137,21 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_27_184216) do
   end
 
   create_table "posmaps", force: :cascade do |t|
-    t.integer "gk"
-    t.integer "sw"
-    t.integer "dc"
-    t.integer "dr"
-    t.integer "dl"
-    t.integer "dm"
-    t.integer "wbr"
-    t.integer "wbl"
-    t.integer "mc"
-    t.integer "mr"
-    t.integer "ml"
-    t.integer "amc"
-    t.integer "amr"
-    t.integer "aml"
-    t.integer "st"
+    t.integer "gk", default: 1
+    t.integer "sw", default: 1
+    t.integer "dc", default: 1
+    t.integer "dr", default: 1
+    t.integer "dl", default: 1
+    t.integer "dm", default: 1
+    t.integer "wbr", default: 1
+    t.integer "wbl", default: 1
+    t.integer "mc", default: 1
+    t.integer "mr", default: 1
+    t.integer "ml", default: 1
+    t.integer "amc", default: 1
+    t.integer "amr", default: 1
+    t.integer "aml", default: 1
+    t.integer "st", default: 1
     t.integer "player_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
