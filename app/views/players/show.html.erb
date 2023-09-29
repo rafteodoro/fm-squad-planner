@@ -5,8 +5,19 @@
       <%= link_to 'edit', edit_player_path(@player), class:"btn btn-sm btn-secondary" %>
       <%= link_to 'position map', edit_posmap_path(@posmap), class:"btn btn-sm btn-success" %>
     </h1>
-    <h5><%= @player.position %></h5>
-    <h5><%= @player.age %> years old</h5>
+  </div>
+  <div class="row">
+    <div class="col">
+      <h5><%= @player.position %></h5>
+      <h5><%= @player.age %> years old</h5>
+    </div>
+    <div class="col">
+      <p>
+        <% playable_positions(@posmap).each do |position| %>
+          <%= position %>
+        <% end %>
+      </p>
+    </div>
   </div>
   <div class="row">
     <h5>ATTRIBUTES</h5>
