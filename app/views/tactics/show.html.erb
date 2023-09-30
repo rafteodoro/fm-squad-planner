@@ -1,9 +1,9 @@
 <div class="container">
   <h1><%= @tactic.name %></h1>
-  <%= link_to 'Back', tactics_path, class:"btn btn-sm btn-secondary" %>
-  <%= link_to 'Add position', new_tactic_position_path(@tactic), class:"btn btn-sm btn-primary" %>
-  <%= link_to 'Evaluate!', evaluate_tactic_path(@tactic), class:"btn btn-sm btn-success" %>
-
+  <%= link_to 'back', tactics_path, class:"btn btn-sm btn-secondary" %>
+  <%= link_to 'add position', new_tactic_position_path(@tactic), class:"btn btn-sm btn-primary" %>
+  <%= link_to 'evaluate!', evaluate_tactic_path(@tactic), class:"btn btn-sm btn-success" %>
+  <%= link_to 'delete', tactic_path(@tactic), data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' }, class:"btn btn-sm btn-danger"  %>
   <table class="table table-striped">
     <thead>
       <tr>

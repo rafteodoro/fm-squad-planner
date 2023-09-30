@@ -12,7 +12,7 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :tactics, only: %i[index show new create] do
+  resources :tactics, only: %i[index show new create destroy] do
     resources :positions, only: %i[new create]
   end
 
