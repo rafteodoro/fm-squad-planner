@@ -23,6 +23,12 @@ class TacticsController < ApplicationController
     @players = Player.all
   end
 
+  def destroy
+    @tactic = Tactic.find(params[:id])
+    @tactic.destroy
+    redirect_to tactics_path
+  end
+
   private
 
   def tactic_params

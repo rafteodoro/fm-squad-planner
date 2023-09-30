@@ -2,7 +2,6 @@
 
 Rails.application.routes.draw do
   root 'players#index'
-  # get '/articles', to: 'articles#index'
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
@@ -13,7 +12,7 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :tactics, only: %i[index show new create] do
+  resources :tactics, only: %i[index show new create destroy] do
     resources :positions, only: %i[new create]
   end
 
