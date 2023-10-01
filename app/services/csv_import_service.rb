@@ -8,7 +8,6 @@ class CsvImportService
     opened_file = File.open(file)
     options = { headers: true, col_sep: ',' }
     CSV.foreach(opened_file, **options) do |row|
-
       # map the CSV columns to your database columns
       player_hash = {}
       player_hash[:uid] = row['UID']

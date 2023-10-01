@@ -63,7 +63,6 @@ class CreatePlayers < ActiveRecord::Migration[7.0]
       t.integer :h_injury_proneness
       t.integer :h_dirtiness
 
-
       t.timestamps
     end
   end
