@@ -1,15 +1,118 @@
-<% @positions.each do |position|%>
-  <%= position.name %>
-  <%= position.mentality %>
-  <%= position.role %>
+<div class="container">
+  <%= link_to 'back', tactic_path(@tactic), class:"btn btn-sm btn-secondary" %>
 
-  <% best_rated_players = get_best_players(position, @players) %>
-  <%# Show the three best players in said position %>
-  <% 3.times do |i| %>
-    <p>
-      <%= i + 1 %> -
-      <%= best_rated_players[i][0].name %>
-      <%= best_rated_players[i][1] %>
-    </p>
-  <% end %>
-<% end %>
+  <div class="row justify-content-center">
+    <div class="col-4 text-center">
+      <% @st.each do |p| %>
+        <h5>
+          <%= p.name %>
+          <%= p.mentality %>
+          <%= p.role %>
+        </h5>
+
+        <% get_best_three_players(p, @players).each do |player| %>
+          <p><%= player %></p>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="row justify-content-center">
+    <% @am.each do |p| %>
+      <div class="col-4 text-center">
+        <h5>
+          <%= p.name %>
+          <%= p.mentality %>
+          <%= p.role %>
+        </h5>
+
+        <% get_best_three_players(p, @players).each do |player| %>
+          <p><%= player %></p>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="row justify-content-center">
+    <% @m.each do |p| %>
+      <div class="col-4 text-center">
+        <h5>
+          <%= p.name %>
+          <%= p.mentality %>
+          <%= p.role %>
+        </h5>
+
+        <% get_best_three_players(p, @players).each do |player| %>
+          <p><%= player %></p>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="row justify-content-center">
+    <% @dm.each do |p| %>
+      <div class="col-4 text-center">
+        <h5>
+          <%= p.name %>
+          <%= p.mentality %>
+          <%= p.role %>
+        </h5>
+
+        <% get_best_three_players(p, @players).each do |player| %>
+          <p><%= player %></p>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="row justify-content-center">
+    <% @d.each do |p| %>
+      <div class="col-3 text-center">
+        <h5>
+          <%= p.name %>
+          <%= p.mentality %>
+          <%= p.role %>
+        </h5>
+
+        <% get_best_three_players(p, @players).each do |player| %>
+          <p><%= player %></p>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="row justify-content-center">
+    <div class="col-4 text-center">
+      <% @sw.each do |p| %>
+        <h5>
+          <%= p.name %>
+          <%= p.mentality %>
+          <%= p.role %>
+        </h5>
+
+        <% get_best_three_players(p, @players).each do |player| %>
+          <p><%= player %></p>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="row justify-content-center">
+    <div class="col-4 text-center">
+      <% @gk.each do |p| %>
+        <h5>
+          <%= p.name %>
+          <%= p.mentality %>
+          <%= p.role %>
+        </h5>
+
+        <% get_best_three_players(p, @players).each do |player| %>
+          <p><%= player %></p>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+
+
+
+</div>

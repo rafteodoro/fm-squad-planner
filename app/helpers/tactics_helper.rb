@@ -2,6 +2,15 @@
 
 # This helper is used to calculate the best players for a given position
 module TacticsHelper
+
+  # Returns the three best players for a given position
+  def get_best_three_players(position, players)
+    best_rated_players = get_best_players(position, players)
+
+    # Returns an array with first three players
+    best_rated_players[0..2].map.with_index { |player, index| "#{index + 1} - #{player[0].name} #{player[1]}%" }
+  end
+
   # Returns the best player for a given position
   def get_best_players(position, players)
     rated_players = []
