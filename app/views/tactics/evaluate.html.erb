@@ -2,4 +2,14 @@
   <%= position.name %>
   <%= position.mentality %>
   <%= position.role %>
+
+  <% best_rated_players = get_best_players(position, @players) %>
+  <%# Show the three best players in said position %>
+  <% 3.times do |i| %>
+    <p>
+      <%= i + 1 %> -
+      <%= best_rated_players[i][0].name %>
+      <%= best_rated_players[i][1] %>
+    </p>
+  <% end %>
 <% end %>

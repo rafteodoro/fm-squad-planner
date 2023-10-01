@@ -44,13 +44,13 @@ class PositionsController < ApplicationController
 
   def position_params
     params.require(:position).permit(
-      :tactic_id, :name, :role, :mentality, :acc_w, :agi_w, :bal_w, :jum_w,
-      :nat_w, :pac_w, :sta_w, :str_w, :agg_w, :ant_w, :bra_w, :com_w, :con_w,
-      :dec_w, :det_w, :fla_w, :lea_w, :otb_w, :pos_w, :tea_w, :vis_w, :wor_w,
-      :cor_w, :cro_w, :dri_w, :fin_w, :fir_w, :fre_w, :hea_w, :lon_w, :lth_w,
-      :mar_w, :pas_w, :pen_w, :tac_w, :tec_w, :gk_aer_w, :gk_car_w, :gk_com_w,
-      :gk_ecc_w, :gk_han_w, :gk_kic_w, :gk_one_w, :gk_ref_w, :gk_rus_w,
-      :gk_pun_w, :gk_thr_w, :ccy_w, :dir_w, :imp_w, :inj_w
+      :tactic_id, :name, :role, :mentality, :corners, :crossing, :dribbling, :finishing, :first_touch, :free_kicks,
+      :heading, :long_shots, :long_throw, :marking, :passing, :penalty_taking, :tackling, :technique, :aggression,
+      :anticipation, :bravery, :composure, :concentration, :decisions, :determination, :flair, :leadership,
+      :off_the_ball, :positioning, :teamwork, :vision, :work_rate, :acceleration, :agility, :balance, :jumping,
+      :natural_fitness, :pace, :stamina, :strength, :aerial_reach, :command_of_area, :communication, :eccentricity,
+      :handling, :kicking, :one_on_ones, :punching, :reflexes, :rushing_out, :throwing, :h_consistency,
+      :h_important_matches, :h_injury_proneness, :h_dirtiness, :position_w
     )
   end
 
