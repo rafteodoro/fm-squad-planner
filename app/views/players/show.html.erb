@@ -2,10 +2,11 @@
   <div class="row">
     <h1>
       <%= @player.name %>
-      <%= link_to 'edit', edit_player_path(@player), class:"btn btn-sm btn-secondary" %>
+      <%= link_to 'edit', edit_player_path(@player), class:"btn btn-sm btn-warning" %>
       <%= link_to 'position map', edit_posmap_path(@posmap), class:"btn btn-sm btn-success" %>
     </h1>
   </div>
+    <%= link_to 'back', players_path, class:"btn btn-sm btn-secondary" %>
   <div class="row">
     <div class="col">
       <h5><%= @player.position %></h5>
