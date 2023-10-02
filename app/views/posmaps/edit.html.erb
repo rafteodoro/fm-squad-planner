@@ -4,60 +4,59 @@
       <h1><%= @player.name %></h1>
       <h5><%= @player.position %></h5>
     </div>
-
     <div class="row justify-content-center">
       <div class="col-4 text-center">
-        <%= f.input :gk, label:"GK" %>
-        <%= f.input :sw, label:"SW" %>
+        <%= f.input :st, label:"ST" %>
       </div>
     </div>
     <div class="row">
       <div class="col-4 text-center">
-        <%= f.input :dr, label:"D (R)" %>
-      </div>
-      <div class="col-4 text-center">
-        <%= f.input :dc, label:"D (C)" %>
-      </div>
-      <div class="col-4 text-center">
-          <%= f.input :dl, label:"D (L)" %>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-4 text-center">
-        <%= f.input :wbr, label:"WB (R)" %>
-      </div>
-      <div class="col-4 text-center">
-        <%= f.input :dm, label:"DM" %>
-      </div>
-      <div class="col-4 text-center">
-        <%= f.input :wbl, label:"WB (L)" %>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-4 text-center">
-        <%= f.input :mr, label:"M (R)" %>
-      </div>
-      <div class="col-4 text-center">
-        <%= f.input :mc, label:"M (C)" %>
-      </div>
-      <div class="col-4 text-center">
-        <%= f.input :ml, label:"M (L)" %>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-4 text-center">
-        <%= f.input :amr, label:"AM (R)" %>
+        <%= f.input :aml, label:"AM (L)" %>
       </div>
       <div class="col-4 text-center">
         <%= f.input :amc, label:"AM (C)" %>
       </div>
       <div class="col-4 text-center">
-        <%= f.input :aml, label:"AM (L)" %>
+        <%= f.input :amr, label:"AM (R)" %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-4 text-center">
+        <%= f.input :ml, label:"M (L)" %>
+      </div>
+      <div class="col-4 text-center">
+        <%= f.input :mc, label:"M (C)" %>
+      </div>
+      <div class="col-4 text-center">
+        <%= f.input :mr, label:"M (R)" %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-4 text-center">
+        <%= f.input :wbl, label:"WB (L)" %>
+      </div>
+      <div class="col-4 text-center">
+        <%= f.input :dm, label:"DM" %>
+      </div>
+      <div class="col-4 text-center">
+        <%= f.input :wbr, label:"WB (R)" %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-4 text-center">
+        <%= f.input :dl, label:"D (L)" %>
+      </div>
+      <div class="col-4 text-center">
+        <%= f.input :dc, label:"D (C)" %>
+      </div>
+      <div class="col-4 text-center">
+        <%= f.input :dr, label:"D (R)" %>
       </div>
     </div>
     <div class="row justify-content-center">
       <div class="col-4 text-center">
-        <%= f.input :st, label:"ST" %>
+        <%= f.input :sw, label:"SW" %>
+        <%= f.input :gk, label:"GK" %>
       </div>
     </div>
     <%= f.button :submit, class:"btn btn-sm btn-primary" %>
