@@ -22,7 +22,8 @@ module TacticsHelper
       posmap = Posmap.find_by(player_id: player.id)
       # Goes through all posmaps attributes to check the position rating
       posmap.attributes.each do |key, value|
-        sum += (value * position.position_w) if key == position.name
+        sum += (value * position.position_w) if key == position.name.downcase
+        # debugger if position.name == "ST" && posmap.st == 20
       end
       # If the position attribute is of type float and it is not 0 then multiply it by the player same name attribute
       position.attributes.each do |key, value|
