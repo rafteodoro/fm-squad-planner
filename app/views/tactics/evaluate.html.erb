@@ -12,7 +12,7 @@
         </h5>
 
         <% get_best_three_players(p, @players).each do |player| %>
-          <p><%= player %></p>
+          <p><%= link_to player[0].name, player_path(player) %><%= " #{player[1]}%" %></p>
         <% end %>
       <% end %>
     </div>
@@ -28,7 +28,7 @@
         </h5>
 
         <% get_best_three_players(p, @players).each do |player| %>
-          <p><%= player %></p>
+          <p><%= link_to player[0].name, player_path(player) %><%= " #{player[1]}%" %></p>
         <% end %>
       </div>
     <% end %>
@@ -44,7 +44,7 @@
         </h5>
 
         <% get_best_three_players(p, @players).each do |player| %>
-          <p><%= player %></p>
+          <p><%= link_to player[0].name, player_path(player) %><%= " #{player[1]}%" %></p>
         <% end %>
       </div>
     <% end %>
@@ -60,7 +60,7 @@
         </h5>
 
         <% get_best_three_players(p, @players).each do |player| %>
-          <p><%= player %></p>
+          <p><%= link_to player[0].name, player_path(player) %><%= " #{player[1]}%" %></p>
         <% end %>
       </div>
     <% end %>
@@ -76,7 +76,7 @@
         </h5>
 
         <% get_best_three_players(p, @players).each do |player| %>
-          <p><%= player %></p>
+          <p><%= link_to player[0].name, player_path(player) %><%= " #{player[1]}%" %></p>
         <% end %>
       </div>
     <% end %>
@@ -92,7 +92,7 @@
         </h5>
 
         <% get_best_three_players(p, @players).each do |player| %>
-          <p><%= player %></p>
+          <p><%= link_to player[0].name, player_path(player) %><%= " #{player[1]}%" %></p>
         <% end %>
       <% end %>
     </div>
@@ -108,7 +108,7 @@
         </h5>
 
         <% get_best_three_players(p, @players).each do |player| %>
-          <p><%= player %></p>
+          <p><%= link_to player[0].name, player_path(player) %><%= " #{player[1]}%" %></p>
         <% end %>
       <% end %>
     </div>
