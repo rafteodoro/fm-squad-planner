@@ -8,21 +8,21 @@
     <thead>
       <tr>
         <th scope="col">Position</th>
-        <th scope="col">Mentality</th>
         <th scope="col">Role</th>
+        <th scope="col">Mentality</th>
       </tr>
     </thead>
     <tbody>
       <% @positions.each do |position|%>
-            <tr>
-              <td>
-                <%= link_to position_path(position) do %>
-                  <h5><%= position.name %></h5>
-                <% end %>
-              </td>
-              <td><%= position.mentality %></td>
-              <td><%= position.role %></td>
-            </tr>
+        <tr>
+          <td>
+            <%= link_to position_path(position) do %>
+              <h5><%= position.name %></h5>
+            <% end %>
+          </td>
+          <td><%= position.role %></td>
+          <td><%= position.mentality %></td>
+        </tr>
       <% end %>
     </tbody>
   </table>
