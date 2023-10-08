@@ -3,117 +3,44 @@
   <%= link_to 'back', tactic_path(@tactic), class:"btn btn-sm btn-secondary" %>
 
   <div class="row justify-content-center">
-    <div class="col-4 text-center">
-      <% @st.each do |p| %>
-        <h5>
-          <%= p.name %>
-          <%= p.role %>
-          <%= p.mentality %>
-        </h5>
-
-        <% get_best_three_players(p, @players).each do |player| %>
-          <p><%= link_to player[0].name, player_path(player) %><%= " #{player[1]}%" %></p>
-        <% end %>
-      <% end %>
-    </div>
+    <% @st.each do |p| %>
+      <%= render "players", p: p %>
+    <% end %>
   </div>
 
   <div class="row justify-content-center">
     <% @am.each do |p| %>
-      <div class="col-4 text-center">
-        <h5>
-          <%= p.name %>
-          <%= p.role %>
-          <%= p.mentality %>
-        </h5>
-
-        <% get_best_three_players(p, @players).each do |player| %>
-          <p><%= link_to player[0].name, player_path(player) %><%= " #{player[1]}%" %></p>
-        <% end %>
-      </div>
+      <%= render "players", p: p %>
     <% end %>
   </div>
 
   <div class="row justify-content-center">
     <% @m.each do |p| %>
-      <div class="col-4 text-center">
-        <h5>
-          <%= p.name %>
-          <%= p.role %>
-          <%= p.mentality %>
-        </h5>
-
-        <% get_best_three_players(p, @players).each do |player| %>
-          <p><%= link_to player[0].name, player_path(player) %><%= " #{player[1]}%" %></p>
-        <% end %>
-      </div>
+      <%= render "players", p: p %>
     <% end %>
   </div>
 
   <div class="row justify-content-center">
     <% @dm.each do |p| %>
-      <div class="col-4 text-center">
-        <h5>
-          <%= p.name %>
-          <%= p.role %>
-          <%= p.mentality %>
-        </h5>
-
-        <% get_best_three_players(p, @players).each do |player| %>
-          <p><%= link_to player[0].name, player_path(player) %><%= " #{player[1]}%" %></p>
-        <% end %>
-      </div>
+      <%= render "players", p: p %>
     <% end %>
   </div>
 
   <div class="row justify-content-center">
     <% @d.each do |p| %>
-      <div class="col-3 text-center">
-        <h5>
-          <%= p.name %>
-          <%= p.role %>
-          <%= p.mentality %>
-        </h5>
-
-        <% get_best_three_players(p, @players).each do |player| %>
-          <p><%= link_to player[0].name, player_path(player) %><%= " #{player[1]}%" %></p>
-        <% end %>
-      </div>
+      <%= render "players", p: p %>
     <% end %>
   </div>
 
   <div class="row justify-content-center">
-    <div class="col-4 text-center">
-      <% @sw.each do |p| %>
-        <h5>
-          <%= p.name %>
-          <%= p.role %>
-          <%= p.mentality %>
-        </h5>
-
-        <% get_best_three_players(p, @players).each do |player| %>
-          <p><%= link_to player[0].name, player_path(player) %><%= " #{player[1]}%" %></p>
-        <% end %>
-      <% end %>
-    </div>
+    <% @sw.each do |p| %>
+      <%= render "players", p: p %>
+    <% end %>
   </div>
 
   <div class="row justify-content-center">
-    <div class="col-4 text-center">
-      <% @gk.each do |p| %>
-        <h5>
-          <%= p.name %>
-          <%= p.role %>
-          <%= p.mentality %>
-        </h5>
-
-        <% get_best_three_players(p, @players).each do |player| %>
-          <p><%= link_to player[0].name, player_path(player) %><%= " #{player[1]}%" %></p>
-        <% end %>
-      <% end %>
-    </div>
+    <% @gk.each do |p| %>
+      <%= render "players", p: p %>
+    <% end %>
   </div>
-
-
-
 </div>

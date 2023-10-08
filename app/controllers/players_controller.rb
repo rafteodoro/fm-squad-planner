@@ -14,6 +14,21 @@ class PlayersController < ApplicationController
 
   def edit; end
 
+  def new
+    @player = Player.new
+  end
+
+  def create
+    @player = Player.new(player_params)
+
+    if @player.save
+      redirect_to @player, notice: 'Player was successfully created.'
+    else
+      render :new, status: :unprocessable_entity
+    end
+  end
+  
+
   def update
     if @player.update(player_params)
       redirect_to @player, notice: 'Player was successfully updated.'
