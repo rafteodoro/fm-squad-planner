@@ -1,0 +1,11 @@
+<div class="col-3 text-center">
+  <h5>
+    <%= p.name %>
+    <%= p.role %>
+    <%= p.mentality %>
+  </h5>
+
+  <% get_best_three_players(p, @players).each do |player| %>
+    <p><%= link_to player[0].name, player_path(player) %><%= " #{player[1]}%" %></p>
+  <% end %>
+</div>
