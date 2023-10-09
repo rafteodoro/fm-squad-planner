@@ -30,13 +30,17 @@ class PlayersController < ApplicationController
     end
   end
 
-
   def update
     if @player.update(player_params)
       redirect_to @player, notice: 'Player was successfully updated.'
     else
       render :edit, status: :unprocessable_entity
     end
+  end
+
+  def destroy
+    @player.destroy
+    redirect_to players_url, notice: 'Player was successfully destroyed.'
   end
 
   def import
