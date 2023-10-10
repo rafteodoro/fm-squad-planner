@@ -8,7 +8,7 @@ module TacticsHelper
     best_rated_players = get_best_players(position, players)
 
     # Returns an array with first three players
-    best_rated_players.first(3)
+    best_rated_players.first(5)
   end
 
   # Returns the best player for a given position
@@ -27,7 +27,9 @@ module TacticsHelper
       # If the position attribute is of type float and it is not 0 then multiply it by the player same name attribute
       position.attributes.each do |key, value|
         if value.instance_of?(Float) && value.positive?
-          player.attributes[key] = 21 - player.attributes[key] if %w[h_injury_proneness h_dirtiness eccentricity].any? { |s| key.include?(s) } && player.attributes[key].instance_of?(Integer)
+          if %w[h_injury_proneness h_dirtiness eccentricity].any? { |s| key.include?(s) } && player.attributes[key].instance_of?(Integer)
+            player.attributes[key] = 21 - player.attributes[key]
+          end
           sum += (value * player.attributes[key]) unless player.attributes[key].nil? || value.nil?
           # debugger if player.name == 'Harry Allen'
         end

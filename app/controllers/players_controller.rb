@@ -22,12 +22,13 @@ class PlayersController < ApplicationController
     @player = Player.new(player_params)
 
     if @player.save
+      posmap = Posmap.new(player_id: @player.id)
+      posmap.save
       redirect_to @player, notice: 'Player was successfully created.'
     else
       render :new, status: :unprocessable_entity
     end
   end
-  
 
   def update
     if @player.update(player_params)
@@ -35,6 +36,11 @@ class PlayersController < ApplicationController
     else
       render :edit, status: :unprocessable_entity
     end
+  end
+
+  def destroy
+    @player.destroy
+    redirect_to players_url, notice: 'Player was successfully destroyed.'
   end
 
   def import
@@ -53,13 +59,14 @@ class PlayersController < ApplicationController
   end
 
   def player_params
-    params.require(:player).permit(:corners, :crossing, :dribbling, :finishing, :first_touch, :free_kicks, :heading,
-                                   :long_shots, :long_throw, :marking, :passing, :penalty_taking, :tackling, :technique,
-                                   :aggression, :anticipation, :bravery, :composure, :concentration, :decisions,
-                                   :determination, :flair, :leadership, :off_the_ball, :positioning, :teamwork, :vision,
-                                   :work_rate, :acceleration, :agility, :balance, :jumping, :natural_fitness, :pace,
-                                   :stamina, :strength, :h_consistency, :h_dirtiness, :h_important_matches,
-                                   :h_injury_proneness, :aerial_reach, :command_of_area, :communication, :eccentricity,
-                                   :handling, :kicking, :one_on_ones, :punching, :reflexes, :rushing_out, :throwing)
+    params.require(:player).permit(:name, :age, :position, :corners, :crossing, :dribbling, :finishing, :first_touch,
+                                   :free_kicks, :heading, :long_shots, :long_throw, :marking, :passing, :penalty_taking,
+                                   :tackling, :technique, :aggression, :anticipation, :bravery, :composure,
+                                   :concentration, :decisions, :determination, :flair, :leadership, :off_the_ball,
+                                   :positioning, :teamwork, :vision, :work_rate, :acceleration, :agility, :balance,
+                                   :jumping, :natural_fitness, :pace, :stamina, :strength, :h_consistency, :h_dirtiness,
+                                   :h_important_matches, :h_injury_proneness, :aerial_reach, :command_of_area,
+                                   :communication, :eccentricity, :handling, :kicking, :one_on_ones, :punching,
+                                   :reflexes, :rushing_out, :throwing, :uid)
   end
 end

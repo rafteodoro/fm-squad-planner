@@ -7,7 +7,7 @@ module PlayersHelper
     string = ''
     posmap = Posmap.find_by(player_id: player.id)
     playable_positions(posmap).each do |position|
-      string += position + ' '
+      string = "#{string} #{position}"
     end
     string
   end
