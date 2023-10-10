@@ -8,6 +8,10 @@
   <% end %>
 
   <% get_best_three_players(p, @players).each do |player| %>
-    <p><%= link_to player[0].name, player_path(player) %><%= " #{player[1]}%" %></p>
+    <p>
+      <%= link_to player[0].name, player_path(player) %><%= " #{player[1]}%" %>
+      <button onclick="togglePlayer(<%= player[0].id %>)">Hide/Show</button>
+    </p>
   <% end %>
+
 </div>
