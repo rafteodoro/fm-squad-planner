@@ -7,6 +7,14 @@ module TacticsHelper
   def get_best_three_players(position, players)
     best_rated_players = get_best_players(position, players)
 
+    # Checks if there are any blacklists for the position
+    if position.position_blacklists.any?
+      # Goes through all blacklists for the position and remove the players from the array
+      position.position_blacklists.each do |blacklist|
+        best_rated_players.delete_if { |player| player[0].id == blacklist.player_id }
+      end
+    end
+
     # Returns an array with first three players
     best_rated_players.first(5)
   end

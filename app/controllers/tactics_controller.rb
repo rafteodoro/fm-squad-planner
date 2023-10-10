@@ -21,6 +21,7 @@ class TacticsController < ApplicationController
 
   def evaluate
     @players = Player.all
+    @position_blacklist = PositionBlacklist.new
   end
 
   def destroy

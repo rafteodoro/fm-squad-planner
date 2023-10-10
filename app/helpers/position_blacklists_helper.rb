@@ -1,0 +1,2 @@
+module PositionBlacklistsHelper
+end

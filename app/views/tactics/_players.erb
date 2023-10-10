@@ -8,9 +8,14 @@
   <% end %>
 
   <% get_best_three_players(p, @players).each do |player| %>
+    <%# Create a button to create a position blacklist for this player and position %>
     <p>
+      <%= simple_form_for (@position_blacklist), url: hide_path, method: :post do |f| %>
+        <%= f.hidden_field :player_id, value: player[0].id %>
+        <%= f.hidden_field :position_id, value: p.id %>
+        <%= f.submit "X", class: "btn btn-danger btn-sm" %>
+      <% end %>
       <%= link_to player[0].name, player_path(player) %><%= " #{player[1]}%" %>
-      <button onclick="togglePlayer(<%= player[0].id %>)">Hide/Show</button>
     </p>
   <% end %>
 

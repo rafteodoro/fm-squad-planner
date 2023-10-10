@@ -18,6 +18,8 @@ Rails.application.routes.draw do
 
   resources :positions, only: %i[index show edit update destroy]
   resources :posmaps, only: %i[edit update]
+  resources :position_blacklists, only: %i[create destroy]
+  post "/hide", to: "position_blacklists#hide", as: :hide
 
   get '/tactics/:id/evaluate', to: 'tactics#evaluate', as: 'evaluate_tactic'
 end
