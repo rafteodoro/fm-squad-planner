@@ -6,10 +6,11 @@ class PositionBlacklistsController < ApplicationController
     redirect_to evaluate_tactic_path(@position.tactic)
   end
 
-  def destroy
-    @position_blacklist = PositionBlacklist.find(params[:id])
-    @position_blacklist.destroy
-    redirect_to tactic_path(@position_blacklist.tactic)
+  def show_all_players
+    @position = Position.find(params[:position_id])
+    @position_blacklists = PositionBlacklist.where(position_id: @position.id)
+    @position_blacklists.destroy_all
+    redirect_to evaluate_tactic_path(@position.tactic)
   end
 
   private

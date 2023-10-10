@@ -1,11 +1,16 @@
 <div class="col-3 text-center">
-  <%= link_to position_path(p) do %>
-    <h5>
+  <h6>
+    <%= link_to position_path(p) do %>
       <%= p.name %>
       <%= p.role %>
       <%= p.mentality %>
-    </h5>
-  <% end %>
+    <% end %>
+    <% if p.position_blacklists.present? %>
+      <%= link_to show_all_players_path(position_id: p.id), data: { turbo_method: :delete, turbo_confirm: 'Reset Filters, are you sure?'} do %>
+        <span><i class="fa-solid fa-filter-circle-xmark fa-xs text-danger "></i></span>
+      <% end %>
+    <% end %>
+  </h6>
 
   <% get_best_three_players(p, @players).each do |player| %>
     <%# Create a button to create a position blacklist for this player and position %>
@@ -13,7 +18,9 @@
       <%= simple_form_for (@position_blacklist), url: hide_path, method: :post do |f| %>
         <%= f.hidden_field :player_id, value: player[0].id %>
         <%= f.hidden_field :position_id, value: p.id %>
-        <%= f.submit "X", class: "btn btn-danger btn-sm" %>
+        <%= button_tag type: 'submit', class:'btn-no-bg' do %>
+          <span><i class="fa-solid fa-eye-slash fa-2xs"></i></span>
+        <% end %>
       <% end %>
       <%= link_to player[0].name, player_path(player) %><%= " #{player[1]}%" %>
     </p>
