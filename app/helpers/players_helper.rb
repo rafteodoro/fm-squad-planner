@@ -11,4 +11,28 @@ module PlayersHelper
     end
     string
   end
+
+  # Color the player's attributes based on their value
+  def attribute_class(value)
+    return '' if value.nil?
+
+    case value
+    when 1..5 then 'low' # red
+    when 6..10 then 'average' # blue
+    when 11..15 then 'good' # yellow
+    when 16..20 then 'excellent' # green
+    end
+  end
+
+  # Reverse the attributes that low is good and high is bad
+  def reverse_attribute_class(value)
+    return '' if value.nil?
+
+    case value
+    when 1..5 then 'excellent' # green
+    when 6..10 then 'good' # yellow
+    when 11..15 then 'average' # blue
+    when 16..20 then 'low' # red
+    end
+  end
 end

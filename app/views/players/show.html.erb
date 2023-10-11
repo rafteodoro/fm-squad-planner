@@ -26,121 +26,121 @@
     <div class="col">
       <% if @player.position == "GK" %>
         <h5>GOALKEEPING</h5>
-        <table class="table table-striped">
+        <table class="table">
           <tbody>
             <tr>
               <td>Aerial Reach</td>
-              <td class="attribute"><%= @player.aerial_reach %></td>
+              <td class="attribute <%= attribute_class(@player.aerial_reach) %>"><%= @player.aerial_reach %></td>
             </tr>
             <tr>
               <td>Command of Area</td>
-              <td class="attribute"><%= @player.command_of_area %></td>
+              <td class="attribute <%= attribute_class(@player.command_of_area) %>"><%= @player.command_of_area %></td>
             </tr>
             <tr>
               <td>Communication</td>
-              <td class="attribute"><%= @player.communication %></td>
+              <td class="attribute <%= attribute_class(@player.communication) %>"><%= @player.communication %></td>
             </tr>
             <tr>
               <td>Eccentricity</td>
-              <td class="attribute"><%= @player.eccentricity %></td>
+              <td class="attribute <%= reverse_attribute_class(@player.eccentricity) %>"><%= @player.eccentricity %></td>
             </tr>
             <tr>
               <td>First Touch</td>
-              <td class="attribute"><%= @player.first_touch %></td>
+              <td class="attribute <%= attribute_class(@player.first_touch) %>"><%= @player.first_touch %></td>
             </tr>
             <tr>
               <td>Handling</td>
-              <td class="attribute"><%= @player.handling %></td>
+              <td class="attribute <%= attribute_class(@player.handling) %>"><%= @player.handling %></td>
             </tr>
             <tr>
               <td>Kicking</td>
-              <td><%= @player.kicking %></td>
+              <td class="attribute <%= attribute_class(@player.kicking) %>"><%= @player.kicking %></td>
             </tr>
             <tr>
               <td>One on Ones</td>
-              <td><%= @player.one_on_ones %></td>
+              <td class="attribute <%= attribute_class(@player.one_on_ones) %>"><%= @player.one_on_ones %></td>
             </tr>
             <tr>
               <td>Passing</td>
-              <td><%= @player.passing %></td>
+              <td class="attribute <%= attribute_class(@player.passing) %>"><%= @player.passing %></td>
             </tr>
             <tr>
               <td>Punching (Tendency)</td>
-              <td><%= @player.punching %></td>
+              <td class="attribute <%= attribute_class(@player.punching) %>"><%= @player.punching %></td>
             </tr>
             <tr>
               <td>Reflexes</td>
-              <td><%= @player.reflexes %></td>
+              <td class="attribute <%= attribute_class(@player.reflexes) %>"><%= @player.reflexes %></td>
             </tr>
             <tr>
               <td>Rushing Out (Tendency)</td>
-              <td><%= @player.rushing_out %></td>
+              <td class="attribute <%= attribute_class(@player.rushing_out) %>"><%= @player.rushing_out %></td>
             </tr>
             <tr>
               <td>Throwing</td>
-              <td><%= @player.throwing %></td>
+              <td class="attribute <%= attribute_class(@player.throwing) %>"><%= @player.throwing %></td>
             </tr>
           </tbody>
         </table>
       <% else %>
         <h5>TECHNICAL</h5>
-        <table class="table table-striped">
+        <table class="table">
           <tbody>
             <tr>
               <td>Corners</td>
-              <td><%= @player.corners %></td>
+              <td class="attribute <%= attribute_class(@player.corners) %>"><%= @player.corners %></td>
             </tr>
             <tr>
               <td>Crossing</td>
-              <td><%= @player.crossing %></td>
+              <td class="attribute <%= attribute_class(@player.crossing) %>"><%= @player.crossing %></td>
             </tr>
             <tr>
               <td>Dribbling</td>
-              <td><%= @player.dribbling %></td>
+              <td class="attribute <%= attribute_class(@player.dribbling) %>"><%= @player.dribbling %></td>
             </tr>
             <tr>
               <td>Finishing</td>
-              <td><%= @player.finishing %></td>
+              <td class="attribute <%= attribute_class(@player.finishing) %>"><%= @player.finishing %></td>
             </tr>
             <tr>
               <td>First Touch</td>
-              <td><%= @player.first_touch %></td>
+              <td class="attribute <%= attribute_class(@player.first_touch) %>"><%= @player.first_touch %></td>
             </tr>
             <tr>
               <td>Free Kick Taking</td>
-              <td><%= @player.free_kicks %></td>
+              <td class="attribute <%= attribute_class(@player.free_kicks) %>"><%= @player.free_kicks %></td>
             </tr>
             <tr>
               <td>Heading</td>
-              <td><%= @player.heading %></td>
+              <td class="attribute <%= attribute_class(@player.heading) %>"><%= @player.heading %></td>
             </tr>
             <tr>
               <td>Long Shots</td>
-              <td><%= @player.long_shots %></td>
+              <td class="attribute <%= attribute_class(@player.long_shots) %>"><%= @player.long_shots %></td>
             </tr>
             <tr>
               <td>Long Throws</td>
-              <td><%= @player.long_throw %></td>
+              <td class="attribute <%= attribute_class(@player.long_throw) %>"><%= @player.long_throw %></td>
             </tr>
             <tr>
               <td>Marking</td>
-              <td><%= @player.marking %></td>
+              <td class="attribute <%= attribute_class(@player.marking) %>"><%= @player.marking %></td>
             </tr>
             <tr>
               <td>Passing</td>
-              <td><%= @player.passing %></td>
+              <td class="attribute <%= attribute_class(@player.passing) %>"><%= @player.passing %></td>
             </tr>
             <tr>
               <td>Penalty Taking</td>
-              <td><%= @player.penalty_taking %></td>
+              <td class="attribute <%= attribute_class(@player.penalty_taking) %>"><%= @player.penalty_taking %></td>
             </tr>
             <tr>
               <td>Tackling</td>
-              <td><%= @player.tackling %></td>
+              <td class="attribute <%= attribute_class(@player.tackling) %>"><%= @player.tackling %></td>
             </tr>
             <tr>
               <td>Technique</td>
-              <td><%= @player.technique %></td>
+              <td class="attribute <%= attribute_class(@player.technique) %>"><%= @player.technique %></td>
             </tr>
           </tbody>
         </table>
@@ -148,132 +148,125 @@
     </div>
     <div class="col">
       <h5>MENTAL</h5>
-      <table class="table table-striped">
+      <table class="table">
         <tbody>
           <tr>
             <td>Aggression</td>
-            <td><%= @player.aggression %></td>
+            <td class="attribute <%= attribute_class(@player.aggression) %>"><%= @player.aggression %></td>
           </tr>
           <tr>
             <td>Anticipation</td>
-            <td><%= @player.anticipation %></td>
+            <td class="attribute <%= attribute_class(@player.anticipation) %>"><%= @player.anticipation %></td>
           </tr>
           <tr>
             <td>Bravery</td>
-            <td><%= @player.bravery %></td>
+            <td class="attribute <%= attribute_class(@player.bravery) %>"><%= @player.bravery %></td>
           </tr>
           <tr>
             <td>Composure</td>
-            <td><%= @player.composure %></td>
+            <td class="attribute <%= attribute_class(@player.composure) %>"><%= @player.composure %></td>
           </tr>
           <tr>
             <td>Concentration</td>
-            <td><%= @player.concentration %></td>
+            <td class="attribute <%= attribute_class(@player.concentration) %>"><%= @player.concentration %></td>
           </tr>
           <tr>
             <td>Decisions</td>
-            <td><%= @player.decisions %></td>
+            <td class="attribute <%= attribute_class(@player.decisions) %>"><%= @player.decisions %></td>
           </tr>
           <tr>
             <td>Determination</td>
-            <td><%= @player.determination %></td>
+            <td class="attribute <%= attribute_class(@player.determination) %>"><%= @player.determination %></td>
           </tr>
           <tr>
             <td>Flair</td>
-            <td><%= @player.flair %></td>
+            <td class="attribute <%= attribute_class(@player.flair) %>"><%= @player.flair %></td>
           </tr>
           <tr>
             <td>Leadership</td>
-            <td><%= @player.leadership %></td>
+            <td class="attribute <%= attribute_class(@player.leadership) %>"><%= @player.leadership %></td>
           </tr>
           <tr>
             <td>Off The Ball</td>
-            <td><%= @player.off_the_ball %></td>
+            <td class="attribute <%= attribute_class(@player.off_the_ball) %>"><%= @player.off_the_ball %></td>
           </tr>
           <tr>
             <td>Positioning</td>
-            <td><%= @player.positioning %></td>
+            <td class="attribute <%= attribute_class(@player.positioning) %>"><%= @player.positioning %></td>
           </tr>
           <tr>
             <td>Teamwork</td>
-            <td><%= @player.teamwork %></td>
+            <td class="attribute <%= attribute_class(@player.teamwork) %>"><%= @player.teamwork %></td>
           </tr>
           <tr>
             <td>Vision</td>
-            <td><%= @player.vision %></td>
+            <td class="attribute <%= attribute_class(@player.vision) %>"><%= @player.vision %></td>
           </tr>
           <tr>
             <td>Work Rate</td>
-            <td><%= @player.work_rate %></td>
+            <td class="attribute <%= attribute_class(@player.work_rate) %>"><%= @player.work_rate %></td>
           </tr>
         </tbody>
       </table>
     </div>
     <div class="col">
       <h5>PHYSICAL</h5>
-      <table class="table table-striped">
+      <table class="table">
         <tbody>
           <tr>
             <td>Acceleration</td>
-            <td><%= @player.acceleration %></td>
+            <td class="attribute <%= attribute_class(@player.acceleration) %>"><%= @player.acceleration %></td>
           </tr>
           <tr>
             <td>Agility</td>
-            <td><%= @player.agility %></td>
+            <td class="attribute <%= attribute_class(@player.agility) %>"><%= @player.agility %></td>
           </tr>
           <tr>
             <td>Balance</td>
-            <td><%= @player.balance %></td>
+            <td class="attribute <%= attribute_class(@player.balance) %>"><%= @player.balance %></td>
           </tr>
           <tr>
             <td>Jumping Reach</td>
-            <td><%= @player.jumping %></td>
+            <td class="attribute <%= attribute_class(@player.jumping) %>"><%= @player.jumping %></td>
           </tr>
           <tr>
             <td>Natural Fitness</td>
-            <td><%= @player.natural_fitness %></td>
+            <td class="attribute <%= attribute_class(@player.natural_fitness) %>"><%= @player.natural_fitness %></td>
           </tr>
           <tr>
             <td>Pace</td>
-            <td><%= @player.pace %></td>
+            <td class="attribute <%= attribute_class(@player.pace) %>"><%= @player.pace %></td>
           </tr>
           <tr>
             <td>Stamina</td>
-            <td><%= @player.stamina %></td>
+            <td class="attribute <%= attribute_class(@player.stamina) %>"><%= @player.stamina %></td>
           </tr>
           <tr>
             <td>Strength</td>
-            <td><%= @player.strength %></td>
-          </tr>
-          <tr>
-            <td>Right Foot</td>
-            <td><%= @player.foot_right %></td>
-          </tr>
-          <tr>
-            <td>Left Foot</td>
-            <td><%= @player.foot_left %></td>
+            <td class="attribute <%= attribute_class(@player.strength) %>"><%= @player.strength %></td>
           </tr>
           <tr>
             <td>Consistency</td>
-            <td><%= @player.h_consistency %></td>
+            <td class="attribute <%= attribute_class(@player.h_consistency) %>"><%= @player.h_consistency %></td>
           </tr>
           <tr>
             <td>Dirtiness</td>
-            <td><%= @player.h_dirtiness %></td>
+            <td class="attribute <%= reverse_attribute_class(@player.h_dirtiness) %>"><%= @player.h_dirtiness %></td>
           </tr>
           <tr>
             <td>Important Matches</td>
-            <td><%= @player.h_important_matches %></td>
+            <td class="attribute <%= attribute_class(@player.h_important_matches) %>"><%= @player.h_important_matches %></td>
           </tr>
           <tr>
             <td>Injury Proneness</td>
-            <td><%= @player.h_injury_proneness %></td>
+            <td class="attribute <%= reverse_attribute_class(@player.h_injury_proneness) %>"><%= @player.h_injury_proneness %></td>
+          </tr>
+          <tr>
+            <td>Left Foot <%= @player.foot_left %></td>
+            <td class="attribute">Right Foot <%= @player.foot_right %></td>
           </tr>
         </tbody>
       </table>
     </div>
-  </div>
-  <div class="row">
-    <div id="field"></div>
   </div>
 </div>
