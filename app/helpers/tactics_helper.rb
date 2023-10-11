@@ -16,7 +16,7 @@ module TacticsHelper
     end
 
     # Returns an array with first three players
-    best_rated_players.first(5)
+    best_rated_players.first(3)
   end
 
   # Returns the best player for a given position
