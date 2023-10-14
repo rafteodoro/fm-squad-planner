@@ -19,7 +19,7 @@ class PositionsController < ApplicationController
 
   def update
     if @position.update(position_params)
-      redirect_to position_path(@position)
+      redirect_to tactic_path(@position.tactic)
     else
       render :edit, status: :unprocessable_entity
     end
