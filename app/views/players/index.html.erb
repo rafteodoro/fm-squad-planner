@@ -19,11 +19,7 @@
         <tr>
           <td><%= player.id %></td>
           <td><a href='/players/<%= player.id %>'><%= player.name %></a></td>
-          <% if player.age > 30 %>
-            <td class="text-danger"><%= player.age %></td>
-          <% else %>
-            <td><%= player.age %></td>
-          <% end %>
+          <td class="<%= age_class(player.age) %>"><%= player.age %></td>
           <td><%= player_posmap(player) %></td>
           <td><%= player.personality %></td>
         </tr>

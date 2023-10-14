@@ -35,4 +35,11 @@ module PlayersHelper
     when 16..20 then 'low' # red
     end
   end
+
+  # Color the player's age if it's 30 or greater
+  def age_class(age)
+    return '' if age.nil?
+
+    age >= 30 ? 'text-danger' : ''
+  end
 end
