@@ -10,7 +10,7 @@ class CsvImportService
     CSV.foreach(opened_file, **options) do |row|
       # map the CSV columns to your database columns
       player_hash = {}
-      player_hash[:uid] = row['UID']
+      player_hash[:id] = row['UID']
       player_hash[:name] = row['Name']
       player_hash[:age] = row['Age'].to_i
       player_hash[:position] = row['Position']
@@ -21,17 +21,16 @@ class CsvImportService
       player_hash = addGoalkeeperFields(player_hash, row)
 
       if player_hash[:name].nil? == false
-        player = Player.find_or_initialize_by(uid: player_hash[:uid])
-
-        # Create a posmap for the player created
-        debugger
-        if player.new_record?
+        player = Player.find_or_initialize_by(id: player_hash[:id])
+        player.update(player_hash)
+        # Find out if the player already has a posmap
+        if Posmap.find_by(player_id: player.id).nil?
+          # Create a posmap for the player created
           posmap = Posmap.new
           posmap.player_id = player.id
           posmap.save
         end
 
-        player.update(player_hash)
       end
 
       # for performance, you could create a separate job to import each user

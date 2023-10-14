@@ -7,7 +7,7 @@
   <table class="table">
     <thead>
       <tr>
-        <th scope="col">UID</th>
+        <th scope="col">ID</th>
         <th scope="col">Name</th>
         <th scope="col">Age</th>
         <th scope="col">Position</th>
@@ -17,7 +17,7 @@
     <tbody>
       <% @players.each do |player| %>
         <tr>
-          <td><%= player.uid %></td>
+          <td><%= player.id %></td>
           <td><a href='/players/<%= player.id %>'><%= player.name %></a></td>
           <% if player.age > 30 %>
             <td class="text-danger"><%= player.age %></td>
