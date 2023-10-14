@@ -24,9 +24,7 @@
           <td><%= player_posmap(player) %></td>
           <td class="text-center"><%= player.personality %></td>
           <td class="text-center">
-            <%= link_to edit_player_path(player) do %>
-              <%= hidden_attributes_completed?(player) %>
-            <% end %>
+            <%= hidden_attributes_completed?(player) %>
           </td>
         </tr>
       <% end %>
