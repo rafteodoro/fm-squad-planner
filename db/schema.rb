@@ -12,7 +12,6 @@
 
 ActiveRecord::Schema[7.0].define(version: 2023_10_10_165045) do
   create_table "players", force: :cascade do |t|
-    t.integer "uid", null: false
     t.string "name"
     t.integer "age"
     t.string "position"

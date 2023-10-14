@@ -7,5 +7,5 @@ class Player < ApplicationRecord
   has_many :position_blacklists, dependent: :destroy
   has_many :positions, through: :position_blacklists
   validates :name, presence: true
-  validates :uid, uniqueness: true, presence: true
+  validates :id, uniqueness: true, presence: true
 end

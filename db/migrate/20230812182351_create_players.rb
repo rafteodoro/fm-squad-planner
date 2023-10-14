@@ -3,8 +3,7 @@
 # This migration creates the Players table.
 class CreatePlayers < ActiveRecord::Migration[7.0]
   def change
-    create_table :players do |t|
-      t.integer :uid, null: false
+    create_table :players, id: :integer, primary_key: :id do |t|
       t.string :name
       t.integer :age
       t.string :position

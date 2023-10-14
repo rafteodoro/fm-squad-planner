@@ -67,6 +67,6 @@ class PlayersController < ApplicationController
                                    :jumping, :natural_fitness, :pace, :stamina, :strength, :h_consistency, :h_dirtiness,
                                    :h_important_matches, :h_injury_proneness, :aerial_reach, :command_of_area,
                                    :communication, :eccentricity, :handling, :kicking, :one_on_ones, :punching,
-                                   :reflexes, :rushing_out, :throwing, :uid)
+                                   :reflexes, :rushing_out, :throwing, :id)
   end
 end
