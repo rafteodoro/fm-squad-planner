@@ -42,4 +42,11 @@ module PlayersHelper
 
     age >= 30 ? 'text-danger' : ''
   end
+
+  # Check if the player's hidden attributes are completed
+  def hidden_attributes_completed?(player)
+    if [player.h_consistency, player.h_important_matches, player.h_injury_proneness, player.h_dirtiness].any?(&:nil?)
+      'Incomplete'
+    end
+  end
 end
