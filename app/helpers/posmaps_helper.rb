@@ -6,9 +6,9 @@ module PosmapsHelper
     array = []
     array << 'GK' if posmap.gk >= 12
     array << 'SW' if posmap.sw >= 12
-    array << 'DL' if posmap.dr >= 12
+    array << 'DL' if posmap.dl >= 12
     array << 'DC' if posmap.dc >= 12
-    array << 'DR' if posmap.dl >= 12
+    array << 'DR' if posmap.dr >= 12
     array << 'WBL' if posmap.wbl >= 12
     array << 'WBR' if posmap.wbr >= 12
     array << 'DM' if posmap.dm >= 12
