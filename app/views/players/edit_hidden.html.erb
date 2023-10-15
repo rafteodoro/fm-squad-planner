@@ -1,0 +1,36 @@
+<div class="container">
+  <%= simple_form_for(@player) do |f| %>
+    <div class="row">
+      <h1><%= @player.name %></h1>
+      <h5><%= @player.position %></h5>
+    </div>
+    <div class="row">
+      <div class="col-4">
+        <h5>HIDDEN ATTRIBUTES</h5>
+        <table class="table table-striped">
+          <tbody>
+            <tr>
+              <td>Consistency</td>
+              <td><%= f.input :h_consistency, label:false %></td>
+            </tr>
+            <tr>
+              <td>Dirtiness</td>
+              <td><%= f.input :h_dirtiness, label:false %></td>
+            </tr>
+            <tr>
+              <td>Important Matches</td>
+              <td><%= f.input :h_important_matches, label:false %></td>
+            </tr>
+            <tr>
+              <td>Injury Proneness</td>
+              <td><%= f.input :h_injury_proneness, label:false %></td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="d-flex justify-content-end">
+          <%= f.submit 'save', class: "btn btn-sm btn-success" %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>

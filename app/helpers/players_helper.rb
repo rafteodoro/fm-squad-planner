@@ -35,4 +35,20 @@ module PlayersHelper
     when 16..20 then 'low' # red
     end
   end
+
+  # Color the player's age if it's 30 or greater
+  def age_class(age)
+    return '' if age.nil?
+
+    age >= 30 ? 'text-danger' : ''
+  end
+
+  # Check if the player's hidden attributes are completed
+  def hidden_attributes_completed?(player)
+    if [player.h_consistency, player.h_important_matches, player.h_injury_proneness, player.h_dirtiness].any?(&:nil?)
+      link_to 'Incomplete', edit_hidden_path(player)
+    else
+      "<i class='fa-solid fa-square-check text-success'></i>".html_safe
+    end
+  end
 end

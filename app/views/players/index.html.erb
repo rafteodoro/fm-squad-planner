@@ -6,26 +6,26 @@
 
   <table class="table">
     <thead>
-      <tr>
+      <tr class="text-center">
         <th scope="col">ID</th>
         <th scope="col">Name</th>
         <th scope="col">Age</th>
         <th scope="col">Position</th>
         <th scope="col">Personality</th>
+        <th scope="col">Hidden Attributes</th>
       </tr>
     </thead>
     <tbody>
       <% @players.each do |player| %>
         <tr>
-          <td><%= player.id %></td>
+          <td class="text-center"><%= player.id %></td>
           <td><a href='/players/<%= player.id %>'><%= player.name %></a></td>
-          <% if player.age > 30 %>
-            <td class="text-danger"><%= player.age %></td>
-          <% else %>
-            <td><%= player.age %></td>
-          <% end %>
+          <td class="text-center <%= age_class(player.age) %>"><%= player.age %></td>
           <td><%= player_posmap(player) %></td>
-          <td><%= player.personality %></td>
+          <td class="text-center"><%= player.personality %></td>
+          <td class="text-center">
+            <%= hidden_attributes_completed?(player) %>
+          </td>
         </tr>
       <% end %>
     </tbody>

@@ -2,7 +2,7 @@
 
 # PlayersController is responsible for handling requests for the Player model.
 class PlayersController < ApplicationController
-  before_action :set_player, only: %i[show edit update destroy]
+  before_action :set_player, only: %i[show edit edit_hidden update destroy]
 
   def index
     @players = Player.all
@@ -13,6 +13,8 @@ class PlayersController < ApplicationController
   end
 
   def edit; end
+
+  def edit_hidden; end
 
   def new
     @player = Player.new
@@ -32,7 +34,7 @@ class PlayersController < ApplicationController
 
   def update
     if @player.update(player_params)
-      redirect_to @player, notice: 'Player was successfully updated.'
+      redirect_to players_path, notice: 'Player was successfully updated.'
     else
       render :edit, status: :unprocessable_entity
     end
