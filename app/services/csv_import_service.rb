@@ -20,23 +20,11 @@ class CsvImportService
       player_hash = addPhysicalFields(player_hash, row)
       player_hash = addGoalkeeperFields(player_hash, row)
 
-      if player_hash[:name].nil? == false
-        player = Player.find_or_initialize_by(id: player_hash[:id])
-        player.update(player_hash)
-        # Find out if the player already has a posmap
-        if Posmap.find_by(player_id: player.id).nil?
-          # Create a posmap for the player created
-          posmap = Posmap.new
-          posmap.player_id = player.id
-          posmap.save
-        end
-
-      end
-
-      # for performance, you could create a separate job to import each user
-      # CsvImportJob.perform_later(user_hash)
+      PlayerCreatorService.create_player(player_hash)
     end
   end
+
+
 
   def addTechnicalFields(player_hash, row)
     player_hash[:foot_right] = row['Right Foot']

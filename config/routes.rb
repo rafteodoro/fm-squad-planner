@@ -6,7 +6,8 @@ Rails.application.routes.draw do
   # Creates the route for the import for the CSV file
   resources :players do
     collection do
-      post :import
+      post :import_csv
+      post :import_html
     end
   end
   # Edits the hidden attributes of a player

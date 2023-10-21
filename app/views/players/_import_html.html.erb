@@ -1,0 +1,4 @@
+<%= form_tag import_html_players_path, method: :post, multipart: true do %>
+  <%= file_field_tag :file, accept: ".html" %>
+  <%= submit_tag '⚙️ Import HTML', class:"btn btn-sm btn-primary" %>
+<% end %>
