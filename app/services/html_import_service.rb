@@ -3,7 +3,7 @@ class HtmlImportService
   require 'nokogiri'
 
   def call(file)
-    doc = Nokogiri::HTML.parse(file)
+    doc = Nokogiri::HTML.parse(file, nil, 'UTF-8')
 
     # go through the table rows
     doc.css('tr').each do |row|
