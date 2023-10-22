@@ -1,9 +1,15 @@
 <div class="container">
   <h1>Players</h1>
-  <%= link_to 'add new player', new_player_path, class:'btn btn-sm btn-primary my-2' %>
-  <%# Renders the import button for the CSV File %>
-  <%= render "import_csv" %>
-  <%= render "import_html" %>
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid justify-content-start">
+      <%= link_to 'add new player', new_player_path, class:'btn btn-sm btn-primary my-2 me-2' %>
+
+      <%# Renders the import button for the CSV File %>
+      <%# <%= render "import_csv" %>
+      <%= render "import_html" %>
+
+    </div>
+  </nav>
 
   <table class="table">
     <thead>

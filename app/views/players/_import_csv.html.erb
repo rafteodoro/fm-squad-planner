@@ -1,5 +1,5 @@
 <%#  Creates the form for importing a CSV file %>
 <%= form_tag import_csv_players_path, method: :post, multipart: true do %>
   <%= file_field_tag :file, accept: ".csv" %>
-  <%= submit_tag '⚙️ Import CSV', class:"btn btn-sm btn-primary" %>
+  <%= submit_tag '⚙️ CSV', class:"btn btn-sm btn-primary" %>
 <% end %>
